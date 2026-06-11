@@ -15,7 +15,11 @@ class SimpleRAG:
   if not self.chunks: self.load()
   qt=self.toks(q); out=[]
   for c in self.chunks:
-   ct=self.toks(c['text']); sc=len(qt&ct)/math.sqrt(max(1,len(ct)))
+   ct=self.toks(c['text'])
+   overlap=qt&ct
+   filename_terms=self.toks(c['filename'].replace('_',' '))
+   title_terms=self.toks(c['document_title'])|self.toks(c['section_title'])
+   sc=(len(overlap)/math.sqrt(max(1,len(ct)))) + 0.75*len(qt & filename_terms) + 0.5*len(qt & title_terms)
    if sc>0: out.append((sc,c))
   return sorted(out,key=lambda x:x[0],reverse=True)[:top_k or settings.retrieval_top_k]
 rag=SimpleRAG()
