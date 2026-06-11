@@ -20,7 +20,7 @@ Data: 2026-06-11
 - `GET /robots.txt`: `Disallow: /`.
 
 ## Problemy / ograniczenia
-- Lenovo Server `192.168.0.165` niedostępny, więc nie przetestowano systemd, SSH tunnel ani Tailscale Funnel.
+- Pierwszy test użył błędnego adresu Lenovo. Po korekcie właściwe adresy to LAN `192.168.8.112` i Tailscale `100.79.95.68`; connectivity/SSH działa przez Tailscale. Systemd, SSH tunnel i Tailscale Funnel nadal nie były aktywowane, bo to wymaga osobnej zgody.
 - Thinking OFF: backend wysyła `thinking:false`; jeżeli oMLX wymaga presetu GUI, potrzebna ręczna weryfikacja.
 - RAG jest obecnie lekki keyword-based, zgodny z małym demonstratorem; Chroma/sentence-transformers są wpisane w plan i requirements, ale bez aktywacji na Lenovo nie wykonywano docelowego PersistentClient.
 

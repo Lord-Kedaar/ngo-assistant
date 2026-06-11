@@ -7,7 +7,7 @@ engineering-discipline, local-rag-for-llms, ai-coding-agents, subagent-driven-de
 Endpoint `http://127.0.0.1:8585/v1` odpowiada. Model `gemma-4-12B-it-nvfp4` jest dostępny. Prosty test API zwrócił `OK`.
 
 ## Lenovo Server
-`192.168.0.165` nie odpowiedział na ping ani SSH. To blokuje fazę 7/8, nie blokuje przygotowania artefaktów.
+`192.168.8.112` nie odpowiedział na ping ani SSH. To blokuje fazę 7/8, nie blokuje przygotowania artefaktów.
 
 ## Porty
 Mac: `8585` zajęty przez oMLX; `8088` i `18585` wolne lokalnie.
@@ -74,11 +74,11 @@ chat_http= 200 latency= 1.42
 content_preview= OK
 finish= stop
 \n## lenovo connectivity
-PING 192.168.0.165 (192.168.0.165): 56 data bytes
+PING 192.168.8.112 (192.168.8.112): 56 data bytes
 
---- 192.168.0.165 ping statistics ---
+--- 192.168.8.112 ping statistics ---
 1 packets transmitted, 0 packets received, 100.0% packet loss
-ssh: connect to host 192.168.0.165 port 22: Operation timed out
+ssh: connect to host 192.168.8.112 port 22: Operation timed out
 \n## ssh mac remote login
 You need administrator access to run this tool... exiting!
 \n## opencode smoke

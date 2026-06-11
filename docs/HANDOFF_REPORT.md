@@ -19,7 +19,7 @@ OMLX_BASE_URL=http://127.0.0.1:8585/v1 python -m uvicorn backend.app.main:app --
 - Tailscale Funnel: nieaktywny.
 - systemd: pliki przygotowane, nieinstalowane.
 - SSH tunnel: plik przygotowany, nieaktywny.
-- Lenovo Server: niedostępny pod `192.168.0.165` w fazie 0.
+- Lenovo Server: pierwszy test użył błędnego adresu; właściwe adresy do ponownego testu to LAN `192.168.8.112` lub Tailscale `100.79.95.68`.
 - Model: `gemma-4-12B-it-nvfp4`.
 - Thinking OFF: wymaga potwierdzenia presetem oMLX, jeśli parametr API `thinking:false` nie wystarczy.
 
