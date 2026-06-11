@@ -1,0 +1,19 @@
+[Unit]
+Description=NGO Local Knowledge Assistant Demo
+After=network-online.target
+Wants=network-online.target
+[Service]
+Type=simple
+User=radek
+WorkingDirectory=/opt/ngo-local-knowledge-assistant-demo
+EnvironmentFile=/opt/ngo-local-knowledge-assistant-demo/.env
+ExecStart=/opt/ngo-local-knowledge-assistant-demo/.venv/bin/python -m uvicorn backend.app.main:app --host 127.0.0.1 --port 8088
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+ProtectHome=true
+ReadWritePaths=/opt/ngo-local-knowledge-assistant-demo/data
+[Install]
+WantedBy=multi-user.target
