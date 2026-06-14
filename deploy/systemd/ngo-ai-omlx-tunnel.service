@@ -5,7 +5,7 @@ Wants=network-online.target
 [Service]
 Type=simple
 User=radek
-ExecStart=/usr/bin/ssh -N -o ExitOnForwardFailure=yes -o ServerAliveInterval=30 -o ServerAliveCountMax=3 -L 127.0.0.1:18585:127.0.0.1:8585 radek@mac-studio.tailnet.example
+ExecStart=/usr/bin/ssh -N -o ExitOnForwardFailure=yes -o ServerAliveInterval=30 -o ServerAliveCountMax=3 -L 127.0.0.1:18585:127.0.0.1:8585 mac-studio-ngo-demo
 Restart=always
 RestartSec=5
 [Install]
