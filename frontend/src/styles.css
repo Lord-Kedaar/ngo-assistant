@@ -244,7 +244,8 @@ textarea[disabled] { cursor: not-allowed; }
 
 /* ==================== Thread (chat) ==================== */
 .thread { display: flex; flex-direction: column; gap: var(--space-5); }
-.msg { display: flex; gap: 12px; }
+.msg { display: flex; gap: 12px; align-items: flex-start; }
+.msg-user { flex-direction: row-reverse; }
 .msg .who {
   width: 32px; height: 32px; border-radius: 50%;
   display: grid; place-items: center;
@@ -262,7 +263,8 @@ textarea[disabled] { cursor: not-allowed; }
   box-shadow: var(--shadow-card);
   flex: 1; min-width: 0;
 }
-.msg-user .msg-bubble { background: var(--surface-soft); }
+.msg-user .msg-bubble { background: var(--surface-soft); max-width: 80%; }
+.msg-user { align-self: flex-end; max-width: 80%; }
 .msg-label {
   font: 500 11px/1 var(--font-mono);
   letter-spacing: 0.12em;
