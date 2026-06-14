@@ -7,9 +7,7 @@ __pycache__/
 node_modules/
 frontend/dist/
 data/chroma/*
-!data/chroma/.gitkeep
 data/quota/*
-!data/quota/.gitkeep
 *.sqlite*
 *.db
 *.log
@@ -17,3 +15,6 @@ data/quota/*
 *.bak.*
 .DS_Store
 *.tsbuildinfo
+# Screenshots and design artifacts
+screenshot*.png
+.bak-*/
