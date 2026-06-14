@@ -265,7 +265,7 @@ export function App(): ReactElement {
         {(isInitialEmpty || isFilled) && (
           <>
             <Composer
-              placeholder={isInitialEmpty ? 'Np. Jak zgłosić pomysł warsztatu?' : 'Doprecyzuj pytanie lub wyślij…'}
+              placeholder={isInitialEmpty ? 'Np. Jak zgłosić pomysł warsztatu?' : 'Zacznij pisać…'}
               initialValue={inputValue}
               hint={inputHint}
               onChange={(v) => { setInputValue(v); if (inputHint) setInputHint(null); }}

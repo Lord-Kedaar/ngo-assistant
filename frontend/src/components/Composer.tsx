@@ -26,6 +26,7 @@ export function Composer({
   const ref = useRef<HTMLTextAreaElement | null>(null);
 
   useEffect(() => { if (autoFocus) ref.current?.focus(); }, [autoFocus]);
+  useEffect(() => { setValue(initialValue); }, [initialValue]);
 
   const handleChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
     const v = e.target.value;
