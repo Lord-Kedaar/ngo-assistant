@@ -42,7 +42,7 @@ export type ChatError =
   | { kind: 'no-sources';   message: string; ref?: ChatPayload }
   | { kind: 'unavailable';  message: string; status?: number }
   | { kind: 'timeout';      message: string }
-  | { kind: 'network';      message: string };
+  | { kind: 'network-error';      message: string };
 
 const MIN_LEN = 3;
 const MAX_LEN = 400;
@@ -148,14 +148,16 @@ export async function sendChat(
   } catch (e: unknown) {
     if (e instanceof ChatHttpError) {
       if (e.status === 503) return { kind: 'unavailable', message: e.detail || 'Model chwilowo niedostępny.', status: 503 };
-      return { kind: 'network', message: e.detail || 'Błąd komunikacji z serwerem.' };
+      if (e.status === 404) return { kind: 'network-error', message: 'Nie udało się połączyć z asystentem. Spróbuj ponownie za chwilę.' };
+      if (e.status >= 400) return { kind: 'network-error', message: 'Nie udało się połączyć z asystentem. Spróbuj ponownie za chwilę.' };
+      return { kind: 'network-error', message: e.detail || 'Błąd komunikacji z serwerem.' };
     }
     if (e instanceof DOMException && e.name === 'AbortError') {
       // Abort pochodzący od naszego timeoutu, nie od użytkownika
       if (!signal?.aborted) return { kind: 'timeout', message: 'Odpowiedź trwała zbyt długo. Spróbuj ponownie.' };
-      return { kind: 'network', message: 'Przerwano.' };
+      return { kind: 'network-error', message: 'Przerwano.' };
     }
-    return { kind: 'network', message: 'Błąd połączenia. Sprawdź sieć i spróbuj ponownie.' };
+    return { kind: 'network-error', message: 'Błąd połączenia. Sprawdź sieć i spróbuj ponownie.' };
   } finally {
     clearTimeout(timer);
     if (signal) signal.removeEventListener('abort', onAbort);

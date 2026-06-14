@@ -29,7 +29,8 @@ type ViewState =
   | { kind: 'unavailable'; question: string; message: string }
   | { kind: 'timeout'; question: string; message: string }
   | { kind: 'quota' }
-  | { kind: 'honeypot'; message: string };
+  | { kind: 'honeypot'; message: string }
+  | { kind: 'network-error'; question: string; message: string };
 
 const FALLBACK_EXAMPLES = [
   'Jak rozpocząć wolontariat w fundacji?',
@@ -143,9 +144,9 @@ export function App(): ReactElement {
         setInputHint({ kind: 'error', text: result.message });
         return;
       }
-      // network
-      setView({ kind: 'idle' });
-      setInputHint({ kind: 'error', text: result.message });
+      // network / backend unreachable
+      setView({ kind: 'network-error', question: v, message: result.message });
+      setQuestions((q) => [...q, { id: `net-${Date.now()}`, kind: 'bot', text: result.message, label: 'Błąd połączenia' }]);
       return;
     }
 
@@ -276,7 +277,7 @@ export function App(): ReactElement {
         )}
 
         {/* Post-answer composer: success / scope / no-sources / unavailable / timeout */}
-        {(view.kind === 'success' || view.kind === 'out-of-scope' || view.kind === 'no-sources' || view.kind === 'unavailable' || view.kind === 'timeout' || view.kind === 'loading') && (
+        {(view.kind === 'success' || view.kind === 'out-of-scope' || view.kind === 'no-sources' || view.kind === 'unavailable' || view.kind === 'timeout' || view.kind === 'network-error' || view.kind === 'loading') && (
           <>
             {view.kind === 'out-of-scope' && (
               <section style={{ marginTop: 'var(--space-5)' }}>
@@ -331,6 +332,26 @@ export function App(): ReactElement {
                       <>Awarie trwają zwykle krócej niż 15 minut. Możesz też przeszukać dokumenty ręcznie w <a href="#">bazie wiedzy fundacji</a>.</>
                     }
                   />
+                }
+              />
+            )}
+
+            {view.kind === 'network-error' && (
+              <ErrorState
+                icon="danger"
+                eyebrow="Błąd połączenia"
+                title="Nie udało się połączyć z asystentem"
+                text={view.message}
+                actions={
+                  <>
+                    <button type="button" className="btn-primary" onClick={onRetry}>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                        <polyline points="23 4 23 10 17 10" />
+                        <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10" />
+                      </svg>
+                      <span>Spróbuj ponownie</span>
+                    </button>
+                  </>
                 }
               />
             )}
