@@ -1,4 +1,4 @@
-import { type ReactElement, useState, FormEvent, ChangeEvent, useRef, useEffect } from 'react';
+import { type ReactElement, type KeyboardEvent, useState, FormEvent, ChangeEvent, useRef, useEffect } from 'react';
 
 type Props = {
   placeholder?: string;
@@ -33,6 +33,16 @@ export function Composer({
     onChange?.(v);
   };
 
+  const handleKeyDown = (e: KeyboardEvent<HTMLTextAreaElement>) => {
+    // Enter wysyła; Shift+Enter = nowa linia
+    if (e.key === 'Enter' && !e.shiftKey && !e.nativeEvent.isComposing) {
+      e.preventDefault();
+      if (disabled) return;
+      if (value.trim().length < MIN_LEN) return;
+      onSubmit(value);
+    }
+  };
+
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     if (disabled) return;
@@ -56,6 +66,7 @@ export function Composer({
               aria-describedby="composer-counter"
               value={value}
               onChange={handleChange}
+              onKeyDown={handleKeyDown}
               disabled={disabled}
             />
           </div>
