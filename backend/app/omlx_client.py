@@ -1,10 +1,30 @@
-import httpx
+import asyncio, json, urllib.request
 from .settings import settings
+
+def _request(path, payload=None, timeout=10):
+    data = json.dumps(payload).encode() if payload is not None else None
+    req = urllib.request.Request(settings.omlx_base_url + path, data=data, headers={
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + settings.omlx_api_key,
+    })
+    with urllib.request.urlopen(req, timeout=timeout) as r:
+        return json.loads(r.read().decode('utf-8'))
+
 async def model_available():
- try:
-  async with httpx.AsyncClient(timeout=5) as c: return (await c.get(settings.omlx_base_url+'/models',headers={'Authorization':'Bearer '+settings.omlx_api_key})).status_code==200
- except Exception: return False
+    try:
+        await asyncio.to_thread(_request, '/models', None, 5)
+        return True
+    except Exception:
+        return False
+
 async def complete(messages):
- payload={'model':settings.omlx_model,'messages':messages,'temperature':0.1,'max_tokens':450,'stream':False,'thinking':False}
- async with httpx.AsyncClient(timeout=settings.request_timeout_seconds) as c:
-  r=await c.post(settings.omlx_base_url+'/chat/completions',headers={'Authorization':'Bearer '+settings.omlx_api_key},json=payload); r.raise_for_status(); return r.json()['choices'][0]['message']['content']
+    payload = {
+        'model': settings.omlx_model,
+        'messages': messages,
+        'temperature': 0.1,
+        'max_tokens': 180,
+        'stream': False,
+        'thinking': False,
+    }
+    data = await asyncio.to_thread(_request, '/chat/completions', payload, settings.request_timeout_seconds)
+    return data['choices'][0]['message']['content']

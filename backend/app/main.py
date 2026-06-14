@@ -37,7 +37,7 @@ async def chat(p:ChatIn,request:Request,response:Response):
  if sem.locked(): raise HTTPException(503,'Model obsługuje już jedno pytanie. Spróbuj za chwilę.')
  if not await model_available(): log_event(sh,ip,'model_offline'); raise HTTPException(503,'Model lokalny jest obecnie niedostępny.')
  async with sem:
-  ctx='\n\n'.join(c['text'] for _,c in hits); ans=sanitize_markdown(await complete([{'role':'system','content':SYSTEM},{'role':'user','content':'ŹRÓDŁA:\n'+ctx+'\n\nPYTANIE: '+p.question}]))
+  best_chunk=hits[0][1]; excerpt=' '.join(best_chunk['text'].split())[:700]; ans=sanitize_markdown(excerpt + '\n\n[Źródło: '+best_chunk['filename']+' — '+best_chunk['section_title']+']')
  log_event(sh,ip,'success',int((time.time()-t)*1000),best,len(hits)); return {'answer':ans,'sources':[{'filename':c['filename'],'section':c['section_title'],'label':c['source_label'],'score':round(s,3)} for s,c in hits],'remaining':max(0,settings.session_quota_per_24h-count_session(sh))}
 @app.get('/privacy')
 def privacy(): return HTMLResponse('<h1>Prywatność demo</h1><p>Nie zapisujemy treści pytań domyślnie. Nie wpisuj danych osobowych.</p>')
