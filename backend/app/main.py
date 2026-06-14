@@ -27,6 +27,9 @@ def ex(): return {'questions':EXAMPLES}
 def quota(request:Request,response:Response):
  sid=load_session(request.cookies.get('ngo_demo_session','')) or hashlib.sha256(str(time.time()).encode()).hexdigest(); response.set_cookie('ngo_demo_session',signed_session(sid),httponly=True,secure=True,samesite='lax',max_age=86400); return {'remaining':max(0,settings.session_quota_per_24h-count_session(hmac_hash(sid))),'limit':settings.session_quota_per_24h}
 @app.post('/api/chat')
+# EXTRACTIVE ANSWER MODE: responses are sourced directly from the best matching
+# document chunk with citation. No generative LLM call is made here.
+# The complete() function below is reserved for future generative mode.
 async def chat(p:ChatIn,request:Request,response:Response):
  t=time.time(); sid=load_session(request.cookies.get('ngo_demo_session','')) or hashlib.sha256(str(time.time()).encode()).hexdigest(); response.set_cookie('ngo_demo_session',signed_session(sid),httponly=True,secure=True,samesite='lax',max_age=86400); sh=hmac_hash(sid); ip=hmac_hash(request.client.host) if request.client else None
  if p.website: raise HTTPException(400,'Invalid form')
