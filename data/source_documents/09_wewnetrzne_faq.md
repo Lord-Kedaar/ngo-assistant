@@ -5,6 +5,9 @@
 ## Cel dokumentu
 FAQ: jak zacząć wolontariat, kto zatwierdza koszt, jak wypożyczyć projektor, czy można użyć publicznego chatbota.
 
+## Jak zacząć wolontariat?
+Napisz na `koordynacja@mosty-sasiedzkie.example.org` i poproś o rozmowę wprowadzającą. Po rozmowie koordynator wysyła formularz zgłoszeniowy, porozumienie wolontariackie oraz krótką instrukcję pierwszego dyżuru. Wolontariusz zaczyna działania dopiero po podpisaniu dokumentów i przydzieleniu opiekuna.
+
 ## Najważniejsze zasady
 - Używaj wyłącznie fikcyjnych danych z domeny example.org.
 - Decyzje finansowe, medialne i dotyczące danych wymagają koordynatora.

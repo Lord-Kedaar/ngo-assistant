@@ -10,6 +10,9 @@ Nowy wolontariusz wypełnia formularz, podpisuje porozumienie i odbywa szkolenie
 - Decyzje finansowe, medialne i dotyczące danych wymagają koordynatora.
 - Nie traktuj dokumentu jako porady prawnej.
 
+## Jak rozpocząć wolontariat
+Aby rozpocząć wolontariat, kandydat pisze na `koordynacja@mosty-sasiedzkie.example.org`, umawia rozmowę wprowadzającą, wypełnia formularz zgłoszeniowy, podpisuje porozumienie wolontariackie oraz zgody organizacyjne, a następnie odbywa krótkie szkolenie i pierwszy dyżur z opiekunem.
+
 ## Procedura krok po kroku
 1. Sprawdź właściwy obszar procedury.
 2. Przygotuj wymagane informacje.
