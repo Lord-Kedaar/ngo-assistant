@@ -30,12 +30,6 @@ export function App(): ReactElement {
   const [locale, setLocaleState] = useState<Locale>(t());
   const [lang, setLangState] = useState<LangCode>('pl');
   const _ = locale;
-  const onLanguageChange = useCallback((code: LangCode) => {
-    switchLanguage(code);
-    setReqLang(code);
-    setExamples(LOCALES[code]?.example_questions ?? []);
-    fetchExampleQuestions(code).then((ex) => { if (ex.length > 0) setExamples(ex); }).catch(() => {});
-  }, []);
   const switchLanguage = useCallback((code: LangCode) => {
     if (!LOCALES[code]) return;
     setLangState(code);
@@ -43,7 +37,24 @@ export function App(): ReactElement {
     setLocaleState(newLoc);
     _apiSetLocale(newLoc);
     setUiLocale(newLoc);
+    // Full conversation reset — switching language must NOT leave a stale
+    // answer in the old language paired with new UI strings. Abort any
+    // in-flight request, clear the thread, drop input value/hint, and
+    // return to the initial greeting view in the new language.
+    abortRef.current?.abort();
+    abortRef.current = null;
+    setQuestions([]);
+    setInputValue('');
+    setInputHint(null);
+    setView({ kind: 'idle' });
   }, []);
+
+  const onLanguageChange = useCallback((code: LangCode) => {
+    switchLanguage(code);
+    setReqLang(code);
+    setExamples(LOCALES[code]?.example_questions ?? []);
+    fetchExampleQuestions(code).then((ex) => { if (ex.length > 0) setExamples(ex); }).catch(() => {});
+  }, [switchLanguage]);
 
   const [view, setView] = useState<ViewState>({ kind: 'idle' });
   const [modelOnline, setModelOnline] = useState<boolean>(true);
