@@ -1,31 +1,34 @@
 import { type ReactElement } from 'react';
 import { Source } from '../api';
+import { getLocale } from '../locales/useLocales';
 
 export function UserMessage({ text }: { text: string }): ReactElement {
+  const loc = getLocale();
   return (
     <div className="msg msg-user">
-      <span className="who" aria-hidden="true">Ty</span>
+      <span className="who" aria-hidden="true">{loc.thread.user_avatar}</span>
       <div className="msg-bubble">
-        <p className="msg-label">Twoje pytanie</p>
+        <p className="msg-label">{loc.thread.user_label}</p>
         <p className="msg-text">{text}</p>
       </div>
     </div>
   );
 }
 
-export function LoadingBubble({ label = 'Przeszukuję dokumenty' }: { label?: string }): ReactElement {
+export function LoadingBubble({ label }: { label?: string }): ReactElement {
+  const loc = getLocale();
   return (
     <div
       className="msg msg-bot loading"
       role="status"
       aria-live="polite"
-      aria-label="Asystent przygotowuje odpowiedź"
+      aria-label={loc.thread.loading_aria}
     >
       <span className="who" aria-hidden="true">A</span>
       <div className="msg-bubble">
         <div className="loading-head">
           <span className="loading-pulse" aria-hidden="true"></span>
-          <span className="loading-label">{label}</span>
+          <span className="loading-label">{label ?? loc.thread.loading_label}</span>
         </div>
         <div className="skeleton-line w-90" aria-hidden="true"></div>
         <div className="skeleton-line w-75" aria-hidden="true"></div>
@@ -48,18 +51,18 @@ export function AnswerMessage({
   feedback: Feedback;
   onFeedback: (v: 'up' | 'down') => void;
 }): ReactElement {
-  // Backend sanitizes przez bleach.clean(t, tags=[], strip=True) → plain text
-  // Dzielimy po nowej linii na akapity, renderujemy z zachowaniem [Źródło: ...] jako muted
+  const loc = getLocale();
+  const sourcePrefixes = ['[Źródło:', '[Source:', '[Quelle:'];
   const lines = answer.split('\n').map((l) => l.trim()).filter(Boolean);
   const body = lines.map((line, i) => (
-    <p key={i}>{line.startsWith('[Źródło:') ? <em style={{ color: 'var(--muted)' }}>{line}</em> : line}</p>
+    <p key={i}>{sourcePrefixes.some((prefix) => line.startsWith(prefix)) ? <em style={{ color: 'var(--muted)' }}>{line}</em> : line}</p>
   ));
 
   return (
     <div className="msg msg-bot">
       <span className="who" aria-hidden="true">A</span>
       <div className="msg-bubble">
-        <p className="msg-label">Odpowiedź asystenta</p>
+        <p className="msg-label">{loc.bot_label}</p>
         <div className="answer-body">
           {body}
 
@@ -78,16 +81,17 @@ export function AnswerMessage({
 }
 
 function Sources({ sources }: { sources: Source[] }): ReactElement {
-  // Badge z numerem dokumentu: parsuj "02_podrecznik_wolontariusza.md — Sekcja" → "02"
+  const loc = getLocale();
   const numOf = (filename: string) => {
     const m = filename.match(/^(\d{1,3})[_-]/);
     return m ? m[1] : filename.slice(0, 2).toUpperCase();
   };
+  const docLabel = sources.length === 1 ? loc.source.document_singular : loc.source.document_plural;
   return (
     <div className="sources">
       <div className="sources-head">
-        <p className="sources-eyebrow">Źródła · {sources.length} {sources.length === 1 ? 'dokument' : 'dokumenty'}</p>
-        <p className="sources-hint">Na podstawie dokumentów fundacji</p>
+        <p className="sources-eyebrow">{loc.source.eyebrow.replace('{count}', String(sources.length)).replace('{label}', docLabel)}</p>
+        <p className="sources-hint">{loc.source.hint}</p>
       </div>
       <div className="sources-list">
         {sources.map((s, i) => (
@@ -112,14 +116,15 @@ function FeedbackRow({
   value: Feedback;
   onChange: (v: 'up' | 'down') => void;
 }): ReactElement {
+  const loc = getLocale();
   return (
     <div className="feedback">
-      <span className="feedback-label">Czy to pomogło?</span>
-      <div className="feedback-btns" role="group" aria-label="Ocena odpowiedzi">
+      <span className="feedback-label">{loc.feedback.label}</span>
+      <div className="feedback-btns" role="group" aria-label={loc.feedback.label}>
         <button
           type="button"
           className={`fb-btn ${value === 'up' ? 'is-active' : ''}`}
-          aria-label="Tak, odpowiedź pomogła"
+          aria-label={loc.feedback.up}
           aria-pressed={value === 'up'}
           onClick={() => onChange('up')}
         >
@@ -130,7 +135,7 @@ function FeedbackRow({
         <button
           type="button"
           className={`fb-btn ${value === 'down' ? 'is-active' : ''}`}
-          aria-label="Nie, odpowiedź nie pomogła"
+          aria-label={loc.feedback.down}
           aria-pressed={value === 'down'}
           onClick={() => onChange('down')}
         >

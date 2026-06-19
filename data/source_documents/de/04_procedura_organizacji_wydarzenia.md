@@ -1,6 +1,6 @@
 # Verfahren zur Organisation einer Veranstaltung
 
-> **Metadaten:** Stiftung Brücken der Nachbarschaft · Synthetisches Dokument · Version 1.0 · Aktualisierung: 2026-03-15 · Kontakt: koordynacja@mosty-sasiedzkie.example.org
+> **Metadaten:** Stiftung Brücken der Nachbarschaft · Synthetisches Dokument · Version 1.0 · Aktualisierung: 2026-03-15 · Kontakt: koordination@nachbarschaftsbruecken.example.org
 
 ## Zweck des Dokuments
 Ideen für Veranstaltungen sind an veranstaltungen@mosty-sasiedzkie.example.org zu senden, unter Angabe von Ziel, Termin, Budget und Hardwarebedarf.

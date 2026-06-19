@@ -1,6 +1,6 @@
 # Volunteer Handbook
 
-> **Metadata:** Mosty Sąsiedzkie Foundation · synthetic document · version 1.0 · updated: 2026-03-15 · contact: koordynacja@mosty-sasiedzkie.example.org
+> **Metadata:** Bridges for Neighbours Foundation · synthetic document · version 1.0 · updated: 2026-03-15 · contact: coordination@bridges-neighbors.example.org
 
 ## Purpose of the document
 A new volunteer completes a form, signs an agreement, and undergoes organizational training before their first shift.
@@ -11,7 +11,7 @@ A new volunteer completes a form, signs an agreement, and undergoes organization
 - Do not treat this document as legal advice.
 
 ## How to start volunteering
-To start volunteering, the candidate writes to `koordynacja@mosty-sasiedzkie.example.org`, schedules an introductory interview, completes an application form, signs a volunteer agreement and organizational consents, and then undergoes short training and their first shift with a supervisor.
+To start volunteering, the candidate writes to `coordination@bridges-neighbors.example.org`, schedules an introductory interview, completes an application form, signs a volunteer agreement and organizational consents, and then undergoes short training and their first shift with a supervisor.
 
 ## Step-by-step procedure
 1. Check the appropriate area of the procedure.

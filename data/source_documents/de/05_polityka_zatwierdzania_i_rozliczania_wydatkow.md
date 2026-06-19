@@ -1,6 +1,6 @@
 # Richtlinie zur Genehmigung und Abrechnung von Ausgaben
 
-> **Metrik:** Stiftung Mosty Sąsiedzkie · Synthetisches Dokument · Version 1.0 · Aktualisierung: 2026-03-15 · Kontakt: koordynacja@mosty-sasiedzkie.example.org
+> **Metrik:** Stiftung Nachbarschaftsbrücken · Synthetisches Dokument · Version 1.0 · Aktualisierung: 2026-03-15 · Kontakt: koordination@nachbarschaftsbruecken.example.org
 
 ## Zweck des Dokuments
 Bis 150 PLN genehmigt der Koordinator, 150–1500 PLN die Finanzabteilung, über 1500 PLN der Vorstand. Abrechnungsunterlagen sind innerhalb von 7 Tagen einzureichen.

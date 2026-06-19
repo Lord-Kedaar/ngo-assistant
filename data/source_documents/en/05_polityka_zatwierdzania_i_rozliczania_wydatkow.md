@@ -1,6 +1,6 @@
 # Expenditure Approval and Settlement Policy
 
-> **Metrics:** Mosty Sąsiedzkie Foundation · synthetic document · version 1.0 · updated: 2026-03-15 · contact: koordynacja@mosty-sasiedzkie.example.org
+> **Metrics:** Bridges for Neighbours Foundation · synthetic document · version 1.0 · updated: 2026-03-15 · contact: coordination@bridges-neighbors.example.org
 
 ## Purpose of the document
 Up to PLN 150 is approved by the coordinator, 150–1500 PLN by finance, and above 1500 PLN by the board. Settlement documents must be sent within 7 days.

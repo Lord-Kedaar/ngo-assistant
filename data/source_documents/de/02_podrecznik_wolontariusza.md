@@ -1,6 +1,6 @@
 # Handbuch für Freiwillige
 
-> **Metadaten:** Stiftung Brücken der Nachbarschaft · synthetisches Dokument · Version 1.0 · Aktualisierung: 2026-03-15 · Kontakt: koordynacja@mosty-sasiedzkie.example.org
+> **Metadaten:** Stiftung Brücken der Nachbarschaft · synthetisches Dokument · Version 1.0 · Aktualisierung: 2026-03-15 · Kontakt: koordination@nachbarschaftsbruecken.example.org
 
 ## Zweck des Dokuments
 Ein neuer Freiwilliger füllt ein Formular aus, unterzeichnet eine Vereinbarung und absolviert eine organisatorische Schulung vor dem ersten Einsatz.
@@ -11,7 +11,7 @@ Ein neuer Freiwilliger füllt ein Formular aus, unterzeichnet eine Vereinbarung 
 - Betrachten Sie dieses Dokument nicht als Rechtsberatung.
 
 ## Beginn des Ehrenamts
-Um das Ehrenamt zu beginnen, schreibt der Bewerber an `koordynacja@mosty-sasiedzkie.example.org`, vereinbart ein Einführungsgespräch, füllt das Anmeldeformular aus, unterzeichnet die Freiwilligenvereinbarung sowie die organisatorischen Einverständniserklärungen und absolviert anschließend eine kurze Schulung sowie den ersten Einsatz mit einem Mentor.
+Um das Ehrenamt zu beginnen, schreibt der Bewerber an `koordination@nachbarschaftsbruecken.example.org`, vereinbart ein Einführungsgespräch, füllt das Anmeldeformular aus, unterzeichnet die Freiwilligenvereinbarung sowie die organisatorischen Einverständniserklärungen und absolviert anschließend eine kurze Schulung sowie den ersten Einsatz mit einem Mentor.
 
 ## Schritt-für-Schritt-Verfahren
 1. Prüfen Sie den entsprechenden Bereich des Verfahrens.

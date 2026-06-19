@@ -1,12 +1,12 @@
 # Internal FAQ
 
-> **Metadata:** Mosty Sąsiedzkie Foundation · synthetic document · version 1.0 · updated: 2026-03-15 · contact: koordynacja@mosty-sasiedzkie.example.org
+> **Metadata:** Bridges for Neighbours Foundation · synthetic document · version 1.0 · updated: 2026-03-15 · contact: coordination@bridges-neighbors.example.org
 
 ## Purpose of the document
 FAQ: how to start volunteering, who approves costs, how to borrow a projector, whether a public chatbot can be used.
 
 ## How to start volunteering?
-Write to `koordynacja@mosty-sasiedzkie.example.org` and request an introductory interview. After the interview, the coordinator will send an application form, a volunteer agreement, and a brief instruction for your first shift. A volunteer may only begin their activities after signing the documents and being assigned a supervisor.
+Write to `coordination@bridges-neighbors.example.org` and request an introductory interview. After the interview, the coordinator will send an application form, a volunteer agreement, and a brief instruction for your first shift. A volunteer may only begin their activities after signing the documents and being assigned a supervisor.
 
 ## Key principles
 - Use only fictional data from the example.org domain.

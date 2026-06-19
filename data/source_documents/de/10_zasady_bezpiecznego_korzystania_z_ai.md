@@ -1,6 +1,6 @@
 # Richtlinien zur sicheren Nutzung von KI
 
-> **Metriken:** Stiftung Mosty Sąsiedzkie · synthetisches Dokument · Version 1.0 · Aktualisierung: 2026-03-15 · Kontakt: koordynacja@mosty-sasiedzkie.example.org
+> **Metriken:** Stiftung Nachbarschaftsbrücken · synthetisches Dokument · Version 1.0 · Aktualisierung: 2026-03-15 · Kontakt: koordination@nachbarschaftsbruecken.example.org
 
 ## Zweck des Dokuments
 In öffentliche KI-Tools werden keine personenbezogenen Daten, vertraulichen Informationen, nicht öffentlichen Budgets oder vollständige Förderunterlagen eingegeben.

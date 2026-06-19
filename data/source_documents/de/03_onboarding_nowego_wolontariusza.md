@@ -1,6 +1,6 @@
 # Onboarding eines neuen Freiwilligen
 
-> **Metriken:** Stiftung Brücken der Nachbarschaft · synthetisches Dokument · Version 1.0 · Aktualisierung: 2026-03-15 · Kontakt: koordynacja@mosty-sasiedzkie.example.org
+> **Metriken:** Stiftung Brücken der Nachbarschaft · synthetisches Dokument · Version 1.0 · Aktualisierung: 2026-03-15 · Kontakt: koordination@nachbarschaftsbruecken.example.org
 
 ## Ziel des Dokuments
 Tag 0 Gespräch, Tage 1-3 Dokumente, Tage 4-7 Auswahl des Bereichs und Betreuers, Tage 8-14 erster Einsatz.

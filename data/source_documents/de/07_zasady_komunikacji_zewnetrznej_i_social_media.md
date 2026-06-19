@@ -1,6 +1,6 @@
 # Richtlinien für externe Kommunikation und Social Media
 
-> **Metadaten:** Stiftung Mosty Sąsiedzkie · Synthetisches Dokument · Version 1.0 · Aktualisierung: 2026-03-15 · Kontakt: koordynacja@mosty-sasiedzkie.example.org
+> **Metadaten:** Stiftung Nachbarschaftsbrücken · Synthetisches Dokument · Version 1.0 · Aktualisierung: 2026-03-15 · Kontakt: koordination@nachbarschaftsbruecken.example.org
 
 ## Ziel des Dokuments
 Beiträge werden von der Kommunikationsabteilung genehmigt. Der Kontakt zu den Medien erfolgt durch eine vom Vorstand beauftragte Person. Wir veröffentlichen keine Daten ohne Zustimmung.

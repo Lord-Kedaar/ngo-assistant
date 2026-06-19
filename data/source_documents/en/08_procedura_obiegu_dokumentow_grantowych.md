@@ -1,6 +1,6 @@
 # Grant Document Workflow Procedure
 
-> **Metadata:** Mosty Sąsiedzkie Foundation · synthetic document · version 1.0 · updated: 2026-03-15 · contact: koordynacja@mosty-sasiedzkie.example.org
+> **Metadata:** Bridges for Neighbours Foundation · synthetic document · version 1.0 · updated: 2026-03-15 · contact: coordination@bridges-neighbors.example.org
 
 ## Purpose of the document
 Every grant document has an owner. Costs must include a description of their relevance to the project, and any deficiencies must be reported before the report deadline.

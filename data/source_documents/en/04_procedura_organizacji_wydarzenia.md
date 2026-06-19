@@ -1,9 +1,9 @@
 # Event Organization Procedure
 
-> **Metadata:** Mosty Sąsiedzkie Foundation · synthetic document · version 1.0 · updated: 2026-03-15 · contact: koordynacja@mosty-sasiedzkie.example.org
+> **Metadata:** Bridges for Neighbours Foundation · synthetic document · version 1.0 · updated: 2026-03-15 · contact: coordination@bridges-neighbors.example.org
 
 ## Purpose of the document
-Event ideas are sent to wydarzenia@mosty-sasiedzkie.example.org, including the objective, date, budget, and equipment requirements.
+Event ideas are sent to events@bridges-neighbors.example.org, including the objective, date, budget, and equipment requirements.
 
 ## Key principles
 - Use only fictional data from the example.org domain.
@@ -26,7 +26,7 @@ Event ideas are sent to wydarzenia@mosty-sasiedzkie.example.org, including the o
 When the matter concerns money, media, personal data, participant safety, equipment, grant documents, or deviations from the procedure.
 
 ## Workshop idea submission
-Workshop ideas are submitted to wydarzenia@mosty-sasiedzkie.example.org. The submission should include the workshop's objective, proposed date, target audience, estimated budget, equipment needs, and the person responsible for contact. The event date is approved by the events coordinator.
+Workshop ideas are submitted to events@bridges-neighbors.example.org. The submission should include the workshop's objective, proposed date, target audience, estimated budget, equipment needs, and the person responsible for contact. The event date is approved by the events coordinator.
 
 ## Approval of event costs
 Event costs up to 150 PLN are approved by the coordinator. Costs from 150 to 1500 PLN are approved by the finance team. Costs above 1500 PLN require a board decision.

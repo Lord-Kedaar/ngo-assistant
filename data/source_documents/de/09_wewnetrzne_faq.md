@@ -1,12 +1,12 @@
 # Internes FAQ
 
-> **Metriken:** Stiftung Brücken der Nachbarschaft · synthetisches Dokument · Version 1.0 · Aktualisierung: 2026-03-15 · Kontakt: koordynacja@mosty-sasiedzkie.example.org
+> **Metriken:** Stiftung Brücken der Nachbarschaft · synthetisches Dokument · Version 1.0 · Aktualisierung: 2026-03-15 · Kontakt: koordination@nachbarschaftsbruecken.example.org
 
 ## Zweck des Dokuments
 FAQ: Wie man ein Ehrenamt beginnt, wer Kosten genehmigt, wie man einen Projektor ausleiht, ob ein öffentlicher Chatbot verwendet werden darf.
 
 ## Wie beginne ich ein Ehrenamt?
-Schreiben Sie an `koordynacja@mosty-sasiedzkie.example.org` und bitten Sie um ein Einführungsgespräch. Nach dem Gespräch sendet der Koordinator ein Anmeldeformular, eine Vereinbarung über das Ehrenamt sowie eine kurze Anleitung für den ersten Einsatz. Ein Freiwilliger beginnt erst nach Unterzeichnung der Dokumente und der Zuweisung eines Mentors mit der Tätigkeit.
+Schreiben Sie an `koordination@nachbarschaftsbruecken.example.org` und bitten Sie um ein Einführungsgespräch. Nach dem Gespräch sendet der Koordinator ein Anmeldeformular, eine Vereinbarung über das Ehrenamt sowie eine kurze Anleitung für den ersten Einsatz. Ein Freiwilliger beginnt erst nach Unterzeichnung der Dokumente und der Zuweisung eines Mentors mit der Tätigkeit.
 
 ## Wichtigste Regeln
 - Verwenden Sie ausschließlich fiktive Daten aus der Domain example.org.

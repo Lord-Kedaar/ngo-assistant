@@ -1,6 +1,6 @@
 # Equipment Rental Rules
 
-> **Metadata:** Mosty Sąsiedzkie Foundation · synthetic document · version 1.0 · updated: 2026-03-15 · contact: koordynacja@mosty-sasiedzkie.example.org
+> **Metadata:** Bridges for Neighbours Foundation · synthetic document · version 1.0 · updated: 2026-03-15 · contact: coordination@bridges-neighbors.example.org
 
 ## Purpose of the document
 Projectors, laptops, and microphones must be reserved at least 3 days in advance. Returns are recorded in the register.

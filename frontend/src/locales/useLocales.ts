@@ -27,7 +27,7 @@ export interface Locale {
   bot_label: string;
   quota: { label: string; reset: string; link: string };
   feedback: { label: string; up: string; down: string };
-  source: { eyebrow: string; hint: string };
+  source: { eyebrow: string; hint: string; document_singular: string; document_plural: string };
   state: {
     quota: { eyebrow: string; title: string; text: string };
     out_of_scope: { eyebrow: string; title: string; text: string };
@@ -37,7 +37,7 @@ export interface Locale {
   };
   labels: { out_of_scope: string; no_sources: string; unavailable: string; timeout: string; network_error: string };
   errors: { empty: string; too_short: string; too_long: string; abort: string; timeout: string; network: string; honeypot: string; quota: string };
-  thread: { aria_label: string; greeting_eyebrow: string };
+  thread: { aria_label: string; greeting_eyebrow: string; user_avatar: string; user_label: string; loading_aria: string; loading_label: string };
   footer: { copyright: string; privacy: string; description: string };
 }
 
@@ -63,7 +63,7 @@ export const PL: Locale = {
   placeholder_empty:"Np. Jak zgłosić pomysł warsztatu?",placeholder_filled:"Zacznij pisać…",placeholder_after_question:"Zadaj kolejne pytanie…",placeholder_quota:"Limit wykorzystany — spróbuj jutro.",bot_label:"Odpowiedź asystenta",
   quota:{label:"Dzienny limit pytań",reset:"Reset: {time}",link:"Poproś o wyższy limit"},
   feedback:{label:"Czy to pomogło?",up:"Tak, odpowiedź pomogła",down:"Nie, odpowiedź nie pomogła"},
-  source:{eyebrow:"Źródła · {count} {label}",hint:"Na podstawie dokumentów fundacji"},
+  source:{eyebrow:"Źródła · {count} {label}",hint:"Na podstawie dokumentów fundacji",document_singular:"dokument",document_plural:"dokumenty"},
   state:{
     quota:{eyebrow:"Limit · {used} / {limit} pytań",title:"Wykorzystałeś dzienny limit pytań",text:"W ramach demo możesz zadać 5 pytań na dobę."},
     out_of_scope:{eyebrow:"Poza zakresem",title:"Nie mogę odpowiedzieć wiarygodnie",text:"Przeformułuj pytanie."},
@@ -73,7 +73,7 @@ export const PL: Locale = {
   },
   labels:{out_of_scope:"Poza zakresem",no_sources:"Brak źródeł",unavailable:"Niedostępny",timeout:"Timeout",network_error:"Błąd połączenia"},
   errors:{empty:"Wpisz pytanie.",too_short:"Pytanie za krótkie.",too_long:"Pytanie za długie.",abort:"Przerwano.",timeout:"Odpowiedź trwała zbyt długo.",network:"Błąd połączenia.",honeypot:"Odrzucone.",quota:"Limit wykorzystany."},
-  thread:{aria_label:"Historia rozmowy",greeting_eyebrow:"Spróbuj zamiast tego"},
+  thread:{aria_label:"Historia rozmowy",greeting_eyebrow:"Spróbuj zamiast tego",user_avatar:"Ty",user_label:"Twoje pytanie",loading_aria:"Asystent przygotowuje odpowiedź",loading_label:"Przeszukuję dokumenty"},
   footer:{copyright:"© 2026 Radosław Pleskot",privacy:"Prywatność",description:"Opis projektu"}
 };
 
@@ -99,7 +99,7 @@ export const EN: Locale = {
   placeholder_empty:"e.g. How to start volunteering?",placeholder_filled:"Start typing…",placeholder_after_question:"Ask another question…",placeholder_quota:"Limit reached — try tomorrow.",bot_label:"Assistant's response",
   quota:{label:"Daily question limit",reset:"Reset: {time}",link:"Request higher limit"},
   feedback:{label:"Was this helpful?",up:"Yes",down:"No"},
-  source:{eyebrow:"Sources · {count} {label}",hint:"Based on foundation documents"},
+  source:{eyebrow:"Sources · {count} {label}",hint:"Based on foundation documents",document_singular:"document",document_plural:"documents"},
   state:{
     quota:{eyebrow:"Limit · {used} / {limit} questions",title:"Daily limit reached",text:"You can ask 5 questions per day."},
     out_of_scope:{eyebrow:"Out of scope",title:"Cannot answer reliably",text:"Rephrase your question."},
@@ -109,7 +109,7 @@ export const EN: Locale = {
   },
   labels:{out_of_scope:"Out of scope",no_sources:"No sources",unavailable:"Unavailable",timeout:"Timeout",network_error:"Network error"},
   errors:{empty:"Type a question.",too_short:"Question too short.",too_long:"Question too long.",abort:"Cancelled.",timeout:"Response took too long.",network:"Connection error.",honeypot:"Rejected.",quota:"Daily limit reached."},
-  thread:{aria_label:"Conversation history",greeting_eyebrow:"Try instead"},
+  thread:{aria_label:"Conversation history",greeting_eyebrow:"Try instead",user_avatar:"You",user_label:"Your question",loading_aria:"Assistant is preparing an answer",loading_label:"Searching documents"},
   footer:{copyright:"© 2026 Radosław Pleskot",privacy:"Privacy",description:"About this project"}
 };
 
@@ -135,7 +135,7 @@ export const DE: Locale = {
   placeholder_empty:"Z.B. Wie beginne ich Freiwilligenarbeit?",placeholder_filled:"Schreiben…",placeholder_after_question:"Nächste Frage…",placeholder_quota:"Limit erreicht — versuchen Sie es morgen.",bot_label:"Antwort des Assistenten",
   quota:{label:"Tägliches Fragenlimit",reset:"Reset: {time}",link:"Höheres Limit anfordern"},
   feedback:{label:"War das hilfreich?",up:"Ja",down:"Nein"},
-  source:{eyebrow:"Quellen · {count} {label}",hint:"Basierend auf Stiftungsdokumenten"},
+  source:{eyebrow:"Quellen · {count} {label}",hint:"Basierend auf Stiftungsdokumenten",document_singular:"Dokument",document_plural:"Dokumente"},
   state:{
     quota:{eyebrow:"Limit · {used} / {limit} Fragen",title:"Tägliches Limit erreicht",text:"Sie können 5 Fragen pro Tag stellen."},
     out_of_scope:{eyebrow:"Außerhalb des Bereichs",title:"Kann nicht zuverlässig antworten",text:"Formulieren Sie Ihre Frage um."},
@@ -145,7 +145,7 @@ export const DE: Locale = {
   },
   labels:{out_of_scope:"Außerhalb",no_sources:"Keine Quellen",unavailable:"Nicht verfügbar",timeout:"Timeout",network_error:"Netzwerkfehler"},
   errors:{empty:"Geben Sie eine Frage ein.",too_short:"Frage zu kurz.",too_long:"Frage zu lang.",abort:"Abgebrochen.",timeout:"Antwort dauerte zu lange.",network:"Verbindungsfehler.",honeypot:"Abgelehnt.",quota:"Tageslimit erreicht."},
-  thread:{aria_label:"Gesprächsverlauf",greeting_eyebrow:"Stattdessen versuchen"},
+  thread:{aria_label:"Gesprächsverlauf",greeting_eyebrow:"Stattdessen versuchen",user_avatar:"Du",user_label:"Deine Frage",loading_aria:"Der Assistent bereitet eine Antwort vor",loading_label:"Dokumente werden durchsucht"},
   footer:{copyright:"© 2026 Radosław Pleskot",privacy:"Datenschutz",description:"Über dieses Projekt"}
 };
 

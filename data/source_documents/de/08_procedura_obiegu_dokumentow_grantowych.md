@@ -1,6 +1,6 @@
 # Verfahren zum Dokumentenkreislauf für Zuschüsse
 
-> **Metrik:** Stiftung Brücken der Nachbarschaft · synthetisches Dokument · Version 1.0 · Aktualisierung: 2026-03-15 · Kontakt: koordynacja@mosty-sasiedzkie.example.org
+> **Metrik:** Stiftung Brücken der Nachbarschaft · synthetisches Dokument · Version 1.0 · Aktualisierung: 2026-03-15 · Kontakt: koordination@nachbarschaftsbruecken.example.org
 
 ## Ziel des Dokuments
 Jedes Zuschussdokument hat einen Verantwortlichen. Kosten müssen im Zusammenhang mit dem Projekt beschrieben werden, und Mängel müssen vor der Berichtsfrist gemeldet werden.

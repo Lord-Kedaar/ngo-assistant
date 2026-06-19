@@ -1,6 +1,6 @@
 # Regeln für die Geräteleihung
 
-> **Metriken:** Stiftung Brücken der Nachbarschaft · synthetisches Dokument · Version 1.0 · Aktualisierung: 2026-03-15 · Kontakt: koordynacja@mosty-sasiedzkie.example.org
+> **Metriken:** Stiftung Brücken der Nachbarschaft · synthetisches Dokument · Version 1.0 · Aktualisierung: 2026-03-15 · Kontakt: koordination@nachbarschaftsbruecken.example.org
 
 ## Zweck des Dokuments
 Beamer, Laptop und Mikrofon müssen mindestens 3 Tage im Voraus reserviert werden. Die Rückgabe erfolgt durch einen Eintrag im Register.

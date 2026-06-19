@@ -1,6 +1,6 @@
 # New Volunteer Onboarding
 
-> **Metrics:** Mosty Sąsiedzkie Foundation · synthetic document · version 1.0 · updated: 2026-03-15 · contact: koordynacja@mosty-sasiedzkie.example.org
+> **Metrics:** Bridges for Neighbours Foundation · synthetic document · version 1.0 · updated: 2026-03-15 · contact: coordination@bridges-neighbors.example.org
 
 ## Purpose of the document
 Day 0: conversation, days 1-3: documents, days 4-7: selection of area and supervisor, days 8-14: first shift.

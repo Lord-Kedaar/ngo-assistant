@@ -1,6 +1,6 @@
 # Über die Stiftung und Struktur
 
-> **Metriken:** Stiftung Brücken der Nachbarschaft · Synthetisches Dokument · Version 1.0 · Aktualisierung: 2026-03-15 · Kontakt: koordynacja@mosty-sasiedzkie.example.org
+> **Metriken:** Stiftung Brücken der Nachbarschaft · Synthetisches Dokument · Version 1.0 · Aktualisierung: 2026-03-15 · Kontakt: koordination@nachbarschaftsbruecken.example.org
 
 ## Zweck des Dokuments
 Der Vorstand genehmigt die Handlungsrichtungen und Ausgaben über 1500 PLN. Der Freiwilligenkoordinator führt das Onboarding durch. Der Veranstaltungskoordinator genehmigt die Termine.

@@ -1,6 +1,6 @@
 # External Communication and Social Media Guidelines
 
-> **Metadata:** Mosty Sąsiedzkie Foundation · synthetic document · version 1.0 · updated: 2026-03-15 · contact: koordynacja@mosty-sasiedzkie.example.org
+> **Metadata:** Bridges for Neighbours Foundation · synthetic document · version 1.0 · updated: 2026-03-15 · contact: coordination@bridges-neighbors.example.org
 
 ## Purpose of the document
 Posts are approved by the communications department. Media contact is handled by a person designated by the board. We do not publish data without consent.
