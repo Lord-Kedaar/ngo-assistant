@@ -150,7 +150,7 @@ export function App(): ReactElement {
         <LanguageSwitcher lang={lang} onChange={onLanguageChange} />
       </TopBar>
       <main className="shell">
-        {showGreeting && <Greeting heading={_.app.description} subtitle={_.app.description} greetingTitle={_.app.title} />}
+        {showGreeting && <Greeting heading={_.greeting.heading} subtitle={_.greeting.subtitle} greetingTitle={_.app.title} />}
         {questions.length > 0 && (
           <section className="thread" aria-label={_.thread.aria_label}>
             {questions.map((m) => {
@@ -207,7 +207,7 @@ export function App(): ReactElement {
                 title={view.kind === 'timeout' ? _.state.unavailable.title_timeout : _.state.unavailable.title_503}
                 text={view.message}
                 actions={<><button type="button" className="btn-primary" onClick={onRetry}><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="23 4 23 10 17 10" /><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10" /></svg><span>{_.state.unavailable.retry}</span></button><button type="button" className="btn-secondary">{_.state.unavailable.eyebrow_503}</button></>}
-                extra={<StatusDetail rows={[{ label: 'Ostatnia odpowiedź', value: '2 min temu' }, { label: 'Incydent', value: 'ng-2026-06-13-01', danger: true }]} foot={<><span>Awarie trwają zwykle krócej niż 15 minut.</span></>} />}
+                extra={<StatusDetail rows={[{ label: _.status_detail.last_answer, value: '2 min temu' }, { label: _.status_detail.incident_label, value: 'ng-2026-06-13-01', danger: true }]} foot={<><span>{_.status_detail.incident_duration_prefix} 15 {_.status_detail.incident_duration_suffix}</span></>} />}
               />
             )}
             {view.kind === 'network-error' && (

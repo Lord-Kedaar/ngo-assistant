@@ -38,7 +38,7 @@ button { font-family: inherit; }
 /* ==================== Topbar ==================== */
 .topbar {
   max-width: 720px; margin: 0 auto var(--space-6);
-  display: flex; justify-content: space-between; align-items: center;
+  display: flex; justify-content: space-between; align-items: center; gap: var(--space-3);
 }
 .brand {
   display: inline-flex; align-items: center; gap: var(--space-2);
@@ -137,7 +137,7 @@ textarea::placeholder { color: var(--muted-soft); }
 textarea[disabled] { cursor: not-allowed; }
 
 .field-foot {
-  display: flex; justify-content: space-between; align-items: center;
+  display: flex; justify-content: space-between; align-items: center; gap: var(--space-3);
   margin-top: var(--space-4);
   gap: var(--space-3);
 }
@@ -454,7 +454,7 @@ textarea[disabled] { cursor: not-allowed; }
   display: flex; flex-direction: column; gap: 10px;
   width: 100%;
 }
-.status-row { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.status-row { display: flex; justify-content: space-between; align-items: center; gap: var(--space-3); gap: 12px; }
 .status-label {
   font: 500 12px/1 var(--font-mono);
   letter-spacing: 0.12em;
@@ -503,7 +503,7 @@ textarea[disabled] { cursor: not-allowed; }
   transition: width 220ms ease;
 }
 .quota-foot {
-  display: flex; justify-content: space-between; align-items: center;
+  display: flex; justify-content: space-between; align-items: center; gap: var(--space-3);
   margin-top: 12px; gap: 12px;
 }
 .quota-reset { font: 400 13px/1.4 var(--font-sans); color: var(--muted); }
@@ -606,8 +606,8 @@ footer a:hover { color: var(--fg); }
 /* ==================== Mobile (≤ 640px) ==================== */
 @media (max-width: 640px) {
   body { padding: var(--space-5) var(--space-4) var(--space-5); }
-  .topbar { max-width: none; margin-bottom: var(--space-5); }
-  .topbar-meta { font-size: 11px; letter-spacing: 0.06em; }
+  .topbar { max-width: none; margin-bottom: var(--space-5); gap: var(--space-2); flex-wrap: wrap; row-gap: var(--space-2); }
+  .topbar-meta { font-size: 11px; letter-spacing: 0.06em; white-space: nowrap; }
   .shell { max-width: none; }
   h1 { font-size: 30px; }
 

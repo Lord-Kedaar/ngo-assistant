@@ -3,6 +3,9 @@
  */
 export interface Locale {
   app: { title: string; description: string };
+  greeting: { heading: string; subtitle: string };
+  status_detail: { last_answer: string; incident_label: string; incident_duration_prefix: string; incident_duration_suffix: string };
+  quota_meter: { aria_label: string; disabled_text: string };
   example_questions: string[];
   suggested_questions: { id: string; text: string }[];
   placeholder_empty: string;
@@ -28,6 +31,9 @@ export interface Locale {
 
 export const PL: Locale = {
   app: { title: "Asystent wiedzy fundacji", description: "Demo" },
+  greeting: { heading: "Cześć, w czym mogę pomóc?", subtitle: "Pytaj o procedury, dokumenty i instrukcje fundacji. Odpowiem tylko na podstawie naszych dokumentów — bez domysłów." },
+  status_detail: { last_answer: "Ostatnia odpowiedź", incident_label: "Incydent", incident_duration_prefix: "Awarie trwają zwykle krócej niż", incident_duration_suffix: "minut." },
+  quota_meter: { aria_label: "Limit wykorzystany w {pct}%", disabled_text: "Wysyłanie pytań jest wstrzymane do {time}." },
   example_questions: ["Jak rozpocząć wolontariat?","Jakie dokumenty musi podpisać nowy wolontariusz?","Kto zatwierdza koszt wydarzenia?","Jak rozliczyć zakup materiałów?","Jak wypożyczyć projektor?","Kto może publikować posty w social media?","Jak zgłosić pomysł warsztatu?","Co powinno znaleźć się w dokumentacji grantowej?"],
   suggested_questions: [{id:"p1",text:"Jak wygląda procedura wyjazdu służbowego?"},{id:"p2",text:"Jakie są zasady delegowania w fundacji?"},{id:"p3",text:"Jak rozliczyć wyjazd zagraniczny?"}],
   placeholder_empty:"Np. Jak zgłosić pomysł warsztatu?",placeholder_filled:"Zacznij pisać…",placeholder_after_question:"Zadaj kolejne pytanie…",placeholder_quota:"Limit wykorzystany — spróbuj jutro.",bot_label:"Odpowiedź asystenta",
@@ -49,6 +55,9 @@ export const PL: Locale = {
 
 export const EN: Locale = {
   app: { title: "Foundation Knowledge Assistant", description: "Demo" },
+  greeting: { heading: "Hi, how can I help?", subtitle: "Ask about procedures, documents, and foundation guidelines. I answer strictly from our documents — no guessing." },
+  status_detail: { last_answer: "Last answer", incident_label: "Incident", incident_duration_prefix: "Outages typically last under", incident_duration_suffix: "minutes." },
+  quota_meter: { aria_label: "Limit used at {pct}%", disabled_text: "Question submission is paused until {time}." },
   example_questions: ["How to start volunteering?","What documents must a new volunteer sign?","Who approves event costs?","How to settle material purchases?","How to borrow a projector?","Who can publish on social media?","How to submit a workshop idea?","What should grant documentation include?"],
   suggested_questions: [{id:"p1",text:"What is the travel procedure?"},{id:"p2",text:"What are the delegation rules?"},{id:"p3",text:"How to settle a foreign trip?"}],
   placeholder_empty:"e.g. How to start volunteering?",placeholder_filled:"Start typing…",placeholder_after_question:"Ask another question…",placeholder_quota:"Limit reached — try tomorrow.",bot_label:"Assistant's response",
@@ -70,6 +79,9 @@ export const EN: Locale = {
 
 export const DE: Locale = {
   app: { title: "Wissensassistent der Stiftung", description: "Demo" },
+  greeting: { heading: "Hallo, wie kann ich helfen?", subtitle: "Fragen Sie nach Verfahren, Dokumenten und Richtlinien der Stiftung. Ich antworte ausschließlich auf Grundlage unserer Dokumente — ohne Rateversuche." },
+  status_detail: { last_answer: "Letzte Antwort", incident_label: "Vorfall", incident_duration_prefix: "Ausfälle dauern in der Regel unter", incident_duration_suffix: "Minuten." },
+  quota_meter: { aria_label: "Limit bei {pct}% genutzt", disabled_text: "Das Senden von Fragen ist bis {time} ausgesetzt." },
   example_questions: ["Wie beginne ich Freiwilligenarbeit?","Welche Dokumente muss ein Freiwilliger unterschreiben?","Wer genehmigt Veranstaltungskosten?","Wie rechne ich Materialeinkäufe ab?","Wie leihe ich einen Beamer aus?","Wer darf in sozialen Medien posten?","Wie reiche ich eine Workshop-Idee ein?","Was muss die Zuschussdokumentation enthalten?"],
   suggested_questions: [{id:"p1",text:"Wie läuft eine Dienstreise ab?"},{id:"p2",text:"Welche Regeln gelten für Delegationen?"},{id:"p3",text:"Wie rechne ich eine Auslandsreise ab?"}],
   placeholder_empty:"Z.B. Wie beginne ich Freiwilligenarbeit?",placeholder_filled:"Schreiben…",placeholder_after_question:"Nächste Frage…",placeholder_quota:"Limit erreicht — versuchen Sie es morgen.",bot_label:"Antwort des Assistenten",
