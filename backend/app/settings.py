@@ -7,6 +7,7 @@ class Settings(BaseSettings):
     omlx_base_url: str = "http://127.0.0.1:18585/v1"
     omlx_api_key: str = ""
     omlx_model: str = "gemma-4-12B-it-nvfp4"
+    embedding_model: str = "bge-m3-mlx-4bit"
     cookie_secret: str = "change-me"
     hmac_secret: str = "change-me"
     session_quota_per_24h: int = 5

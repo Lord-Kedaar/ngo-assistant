@@ -24,3 +24,7 @@ In öffentliche KI-Tools werden keine personenbezogenen Daten, vertraulichen Inf
 
 ## Wann der Koordinator zu kontaktieren ist
 Wenn die Angelegenheit Geld, Medien, personenbezogene Daten, die Sicherheit der Teilnehmer, Ausrüstung, Förderunterlagen oder Abweichungen vom Verfahren betrifft.
+
+
+## Welche Daten darf ich an den Assistenten senden
+An den KI-Assistenten dürfen ausschließlich fiktive Daten aus der Domain example.org gesendet werden. Verboten sind personenbezogene Daten (Namen, Adressen, Telefonnummern, private E-Mails), vertrauliche Stiftungsdaten (nicht-öffentliche Budgets, Spenderlisten, Verträge), vollständige Förderdokumente sowie Inhalte, die Teilnehmer gefährden könnten. Im Zweifel über die Zulässigkeit von Daten — nicht senden und den Koordinator kontaktieren.

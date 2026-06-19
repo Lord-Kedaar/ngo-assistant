@@ -30,3 +30,7 @@ Workshop ideas are submitted to events@bridges-neighbors.example.org. The submis
 
 ## Approval of event costs
 Event costs up to 150 PLN are approved by the coordinator. Costs from 150 to 1500 PLN are approved by the finance team. Costs above 1500 PLN require a board decision.
+
+
+## Maximum workshop budget without board approval
+A workshop with a budget of up to PLN 150 is approved by the event coordinator alone. A budget from PLN 150 to PLN 1500 requires finance team approval. A budget above PLN 1500 requires formal board approval — the request with a schedule and cost estimate is sent to board@bridges-neighbors.example.org at least 14 days before the planned date.

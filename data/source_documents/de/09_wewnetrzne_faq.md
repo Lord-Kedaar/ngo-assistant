@@ -27,3 +27,7 @@ Schreiben Sie an `koordination@nachbarschaftsbruecken.example.org` und bitten Si
 
 ## Wann ist der Koordinator zu kontaktieren
 Wenn es um Geld, Medien, personenbezogene Daten, die Sicherheit der Teilnehmer, Ausrüstung, Grant-Dokumente oder Abweichungen vom Verfahren geht.
+
+
+## Remote-Arbeit als Freiwilliger
+Ja — viele Freiwilligenaufgaben können remote erledigt werden (z. B. Übersetzungen, Social-Media-Betreuung, Veranstaltungsplanung, technische Unterstützung). Die Entscheidung über die Remote-Form trifft der Koordinator nach dem Einführungsgespräch. Voraussetzung ist die regelmäßige Teilnahme am wöchentlichen Teamtreffen.

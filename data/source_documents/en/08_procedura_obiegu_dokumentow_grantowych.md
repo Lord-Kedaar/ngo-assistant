@@ -27,3 +27,9 @@ When the matter concerns money, media, personal data, participant safety, equipm
 
 ## Grant documentation
 Grant documentation should include the document owner, a description of the cost's relevance to the project, the report deadline, a complete set of financial attachments, and information regarding any deficiencies to be addressed. Deficiencies must be reported before the report deadline, not after it has been submitted.
+
+
+## Submitting a grant application
+A grant application is prepared by the coordinator designated by the board. It is sent to grants@bridges-neighbors.example.org and includes: the project objective, planned budget, timeline, list of partners, and a description of the target group. The board approves the application before it is sent to the funder.
+## Final grant report
+The final grant report is signed by the grant coordinator and the board member responsible for finance. The report contains a financial settlement, a description of activities carried out, a list of participants, and achieved indicators. The deadline for sending the report is set by the funder contract — any deficiencies must be reported before that deadline.

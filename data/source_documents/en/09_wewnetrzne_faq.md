@@ -27,3 +27,7 @@ Write to `coordination@bridges-neighbors.example.org` and request an introductor
 
 ## When to contact the coordinator
 When the matter concerns money, media, personal data, participant safety, equipment, grant documents, or deviations from the procedure.
+
+
+## Working remotely as a volunteer
+Yes — many volunteer tasks can be done remotely (e.g. translations, social media management, event planning, technical support). The decision about the remote form is made by the coordinator after the introductory interview. Regular attendance at the weekly team meeting is required.

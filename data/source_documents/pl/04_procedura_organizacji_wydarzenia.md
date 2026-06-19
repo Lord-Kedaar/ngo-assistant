@@ -31,3 +31,7 @@ Pomysł warsztatu zgłasza się na adres wydarzenia@mosty-sasiedzkie.example.org
 ## Zatwierdzanie kosztów wydarzenia
 Koszty wydarzenia do 150 zł zatwierdza koordynator. Koszty od 150 do 1500 zł zatwierdza zespół finansów. Koszty powyżej 1500 zł wymagają decyzji zarządu.
 
+
+
+## Maksymalny budżet warsztatu bez zgody zarządu
+Warsztat z budżetem do 150 zł zatwierdza koordynator wydarzeń samodzielnie. Budżet od 150 do 1500 zł wymaga zgody zespołu finansów. Budżet powyżej 1500 zł wymaga formalnej zgody zarządu — wniosek z harmonogramem i kosztorysem wysyła się na zarząd@mosty-sasiedzkie.example.org minimum 14 dni przed planowanym terminem.

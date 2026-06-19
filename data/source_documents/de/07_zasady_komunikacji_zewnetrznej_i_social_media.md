@@ -27,3 +27,7 @@ Wenn es um Geld, Medien, personenbezogene Daten, die Sicherheit der Teilnehmer, 
 
 ## Veröffentlichung von Beiträgen in sozialen Medien
 Beiträge in sozialen Medien können von einer Person aus dem Kommunikationsteam oder einer vom Vorstand beauftragten Person veröffentlicht werden. Der Inhalt des Beitrags muss vor der Veröffentlichung von der Kommunikationsabteilung genehmigt werden. Es ist nicht erlaubt, personenbezogene Daten, Fotos von Teilnehmern oder vertrauliche Informationen ohne entsprechende Zustimmung zu veröffentlichen.
+
+
+## Darf ein Freiwilliger selbst Beiträge veröffentlichen
+Ein Freiwilliger veröffentlicht keine Beiträge eigenständig. Beiträge werden ausschließlich von einer vom Vorstand benannten Person veröffentlicht (in der Regel ein Mitglied des Kommunikationsteams). Der Inhalt des Beitrags muss vor der Veröffentlichung vom Kommunikationsteam genehmigt werden. Ein Freiwilliger kann Inhalte vorschlagen, sie aber nicht ohne Genehmigung veröffentlichen.

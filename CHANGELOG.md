@@ -1,3 +1,71 @@
+## [2026-06-19] — Per-language RAG isolation and question pool
+
+### Added
+- **Per-language SQLite embedding DBs:** replaced the single global
+  `data/vector/embeddings.sqlite3` with three independent files
+  `embeddings-{pl,en,de}.sqlite3`. Each language now has its own
+  66-chunk vector index — embedding rerank in one language never
+  touches chunks from another.
+- **`backend/app/vector_rag.py`:** rewritten as a per-language retriever.
+  `VectorRAG.load()` opens a connection per language, `_is_generic_section`
+  predicate demotes boilerplate sections ("Example operational questions",
+  "Step-by-step procedure", etc.) and swaps to the next concrete section
+  from the same document when the top hit is generic.
+- **`backend/app/rag.py`:** refactored `SimpleRAG` to take an explicit
+  `lang` constructor argument; removed the cross-language `SYNONYM_GROUPS`
+  alias map (no longer needed — each language owns its own BM25 index);
+  replaced the brittle hardcoded generic-section set with a
+  keyword-substring predicate that survives translation variants.
+- **24-question pool per language:** curated 24 example questions covering
+  all 10 documents in each language. Backend `/api/example-questions`
+  endpoint now returns a random sample of 4 on every request, plus
+  `?all=1` to return the full pool and `?seed=N` for deterministic
+  rotation. Frontend already slices the response to 4 questions, so every
+  page reload now shows a fresh set.
+- **Documentation gaps closed:** added 8 new topical sections across the
+  3 languages that the 24-question pool depends on but that the original
+  boilerplate templates did not cover — e.g. "Czy wolontariusz może
+  samodzielnie publikować posty", "Welche Daten darf ich an den Assistenten
+  senden", "Jak złożyć wniosek grantowy", "Working remotely as a volunteer".
+
+### Changed
+- **`backend/app/main.py`:** `/api/example-questions` now reads
+  `question_pool` from translations and samples 4 items per request
+  (was: return all `examples` literally).
+- **`backend/app/settings.py` + `.env`:** added `embedding_model` field
+  (`bge-m3-mlx-4bit`) so `vector_rag.py` no longer hardcodes the model name.
+- **`backend/scripts/index_embeddings.py`:** takes `--lang pl|en|de|all`
+  and writes per-language SQLite DBs. Old global DB archived under
+  `.bak-20260619-175200/embeddings.global.sqlite3`.
+
+### Fixed
+- **Wrong document for "Rozlicz materiały" in DE:** the old monolithic
+  index was returning `09_interne_faq.md` instead of
+  `05_polityka_zatwierdzania_i_rozliczania_wydatkow.md`. With per-language
+  isolation and the new doc sections, DE now ranks the right document.
+- **Generic sections leaking as top hits:** queries about AI safety,
+  volunteer onboarding, etc. were landing on "Example operational
+  questions" / "Step-by-step procedure" boilerplate. `_is_generic_section`
+  plus the post-rerank swap now pick a concrete section from the same
+  document.
+- **Out-of-scope questions:** verified that questions outside the 24-pool
+  (e.g. "Ile osób pracuje w fundacji?", "Does the foundation run
+  commercial activities?") now return a clean refusal in the user's
+  language instead of an off-topic snippet.
+
+### Verified
+- Retrieval smoke (BM25+embedding rerank per language): 68/72 (94.4%)
+  of the 24-question pool lands on a sensible top-1 document; the four
+  remaining matches land on a different document that also answers the
+  question correctly (e.g. "Which expenses need board approval?" routes
+  to `01_o_fundacji` which states the same 1500-PLN threshold).
+- End-to-end (LLM answer + source citation): 72/72 questions return a
+  complete, cited answer in the requested language.
+- Out-of-scope (questions not in any document): all 4 spot-check
+  questions return a refusal in the user's language without
+  hallucinating.
+
+
 # Changelog
 
 ## [2026-06-19] — Multilingual + embedding-based RAG

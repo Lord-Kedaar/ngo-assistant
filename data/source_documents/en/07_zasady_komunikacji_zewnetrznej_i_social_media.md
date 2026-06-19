@@ -27,3 +27,7 @@ When the matter concerns money, media, personal data, participant safety, equipm
 
 ## Publishing posts on social media
 Social media posts may be published by a member of the communications team or a person designated by the board. Post content must be approved by communications before publication. It is forbidden to publish personal data, photos of participants, or confidential information without appropriate consent.
+
+
+## Can a volunteer publish posts on their own
+A volunteer does not publish posts on their own. Posts are published only by a person designated by the board (usually a member of the communications team). Post content must be approved by the communications team before publication. A volunteer may propose content, but cannot publish it without approval.

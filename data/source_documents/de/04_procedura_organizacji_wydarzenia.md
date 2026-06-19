@@ -30,3 +30,7 @@ Workshop-Ideen sind an veranstaltungen@mosty-sasiedzkie.example.org zu melden. D
 
 ## Genehmigung von Veranstaltungskosten
 Kosten bis zu 150 PLN werden vom Koordinator genehmigt. Kosten zwischen 150 und 1500 PLN werden vom Finanzteam genehmigt. Kosten über 1500 PLN erfordern eine Entscheidung des Vorstands.
+
+
+## Maximales Workshop-Budget ohne Vorstandsgenehmigung
+Ein Workshop mit einem Budget bis 150 PLN wird vom Veranstaltungskoordinator allein genehmigt. Ein Budget von 150 bis 1500 PLN erfordert die Zustimmung des Finanzteams. Ein Budget über 1500 PLN erfordert die formelle Genehmigung des Vorstands — der Antrag mit Zeitplan und Kostenvoranschlag wird an vorstand@nachbarschaftsbruecken.example.org mindestens 14 Tage vor dem geplanten Termin gesendet.

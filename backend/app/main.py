@@ -48,8 +48,25 @@ async def health(): return {'ok':True,'chroma':'local-index','quota_db':'ok','om
 @app.get('/api/status')
 async def status(): return {'demo':'ready','model_available':await model_available(),'questions_per_24h':settings.session_quota_per_24h}
 @app.get('/api/example-questions')
-def ex(lang: str = 'pl'):
- return {'questions':tr(lang[:2]).get('examples', EXAMPLES)}
+def ex(lang: str = 'pl', seed: int | None = None, all: int = 0):
+    """Return suggested example questions.
+
+    With ?all=1 returns the full pool (24 per language).
+    Otherwise returns 4 questions picked from the per-language question_pool
+    (or the curated `examples` list if no pool exists). The selection is
+    deterministic when `seed` is provided and fully random otherwise, so the
+    browser sees a fresh set on every page reload.
+    """
+    txt = tr(lang[:2])
+    pool = txt.get('question_pool')
+    if pool:
+        if all:
+            return {'questions': pool, 'total': len(pool)}
+        import random
+        rng = random.Random(seed) if seed is not None else random.Random()
+        n = min(4, len(pool))
+        return {'questions': rng.sample(pool, n), 'total': len(pool)}
+    return {'questions': txt.get('examples', EXAMPLES)}
 @app.get('/api/quota')
 def quota(request:Request,response:Response):
  sid=load_session(request.cookies.get('ngo_demo_session','')) or hashlib.sha256(str(time.time()).encode()).hexdigest(); response.set_cookie('ngo_demo_session',signed_session(sid),httponly=True,secure=True,samesite='lax',max_age=86400); return {'remaining':max(0,settings.session_quota_per_24h-count_session(hmac_hash(sid))),'limit':settings.session_quota_per_24h}

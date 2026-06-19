@@ -1,32 +1,51 @@
+#!/usr/bin/env python3
 """
-index_embeddings.py — Indeksacja wektorowa dokumentów NGO Assistant
-Używa: oMLX bge-m3 przez tunnel → local SQLite (naprawdę JSON column)
+index_embeddings.py — Per-language embedding indexer.
+
+Builds one SQLite file per language under data/vector/embeddings-{lang}.sqlite3
+so that retrieval in one language never touches embeddings of another.
+
+Usage:
+    python3 backend/scripts/index_embeddings.py --lang pl
+    python3 backend/scripts/index_embeddings.py --lang all    # pl + en + de
 """
-import json, math, re, sys, time, sqlite3
+import argparse
+import json
+import os
+import re
+import sqlite3
+import sys
+import time
+import urllib.request
 from pathlib import Path
 
-OMLX_URL = "http://127.0.0.1:18585/v1/embeddings"
-OMLX_KEY = "0456"
-EMBEDDING_MODEL = "bge-m3-mlx-4bit"
+PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
+DOCS_ROOT = PROJECT_ROOT / "data" / "source_documents"
+VECTOR_DIR = PROJECT_ROOT / "data" / "vector"
+
+OMLX_URL = os.environ.get("OMLX_BASE_URL", "http://127.0.0.1:18585/v1").rstrip("/")
+OMLX_KEY = os.environ.get("OMLX_API_KEY", "")
+EMBEDDING_MODEL = os.environ.get("EMBEDDING_MODEL", "bge-m3-mlx-4bit")
 EMBED_DIMS = 1024
-BASE_DIR = Path("/opt/ngo-local-knowledge-assistant-demo")
-DOCS_ROOT = BASE_DIR / "data/source_documents"
-DB_PATH = BASE_DIR / "data/vector/embeddings.sqlite3"
-CHUNK_SIZE = 700  # chars per chunk (overlap ~100)
+CHUNK_SIZE = 700
+
 
 def embed(text: str) -> list[float]:
-    import urllib.request
+    if not OMLX_URL.endswith("/embeddings"):
+        url = OMLX_URL + ("/v1/embeddings" if not OMLX_URL.endswith("/v1") else "/embeddings")
+    else:
+        url = OMLX_URL
     payload = {"model": EMBEDDING_MODEL, "input": text}
     req = urllib.request.Request(
-        OMLX_URL,
+        url,
         data=json.dumps(payload).encode(),
         headers={"Content-Type": "application/json", "Authorization": f"Bearer {OMLX_KEY}"},
     )
     with urllib.request.urlopen(req, timeout=120) as r:
         return json.loads(r.read().decode())["data"][0]["embedding"]
 
+
 def chunk_sections(path: Path, lang: str):
-    """Split document into chunks by section, sub-split large sections"""
     txt = path.read_text(encoding="utf-8")
     title_m = re.search(r"^#\s+(.+)$", txt, re.M)
     doc_title = title_m.group(1) if title_m else path.stem
@@ -38,7 +57,6 @@ def chunk_sections(path: Path, lang: str):
         if len(body) <= 30:
             continue
         full = f"Dokument: {doc_title}\nSekcja: {st}\n{body}"
-        # Split large sections into sub-chunks
         if len(full) <= CHUNK_SIZE:
             yield {
                 "lang": lang, "filename": path.name, "section": st,
@@ -54,73 +72,94 @@ def chunk_sections(path: Path, lang: str):
                 if len(chunk_text) < 100:
                     break
                 yield {
-                    "lang": lang, "filename": path.name, "section": f"{st} (cz. {chunk_idx + 1})",
-                    "document_title": doc_title, "source_label": f"{path.name} — {st}",
+                    "lang": lang, "filename": path.name,
+                    "section": f"{st} (cz. {chunk_idx + 1})",
+                    "document_title": doc_title,
+                    "source_label": f"{path.name} — {st}",
                     "text": chunk_text, "chunk_index": chunk_idx, "total_chunks": -1,
                 }
                 chunk_idx += 1
 
-def init_db():
-    Path(DB_PATH).parent.mkdir(parents=True, exist_ok=True)
-    conn = sqlite3.connect(str(DB_PATH))
-    conn.execute("""
+
+def init_db(lang: str) -> sqlite3.Connection:
+    db_path = VECTOR_DIR / f"embeddings-{lang}.sqlite3"
+    if db_path.exists():
+        db_path.unlink()  # rebuild from scratch — vector_rag assumes a clean DB
+    VECTOR_DIR.mkdir(parents=True, exist_ok=True)
+    conn = sqlite3.connect(str(db_path))
+    conn.execute(
+        """
         CREATE TABLE IF NOT EXISTS chunks (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             lang TEXT, filename TEXT, section TEXT, document_title TEXT,
             source_label TEXT, text TEXT, embedding TEXT,
             chunk_index INTEGER, indexed_at TEXT
         )
-    """)
-    conn.execute("CREATE INDEX IF NOT EXISTS idx_lang ON chunks(lang)")
+        """
+    )
     conn.execute("CREATE INDEX IF NOT EXISTS idx_filename ON chunks(filename)")
     conn.commit()
     return conn
 
-def cosine_similarity(a: list[float], b: list[float]) -> float:
-    dot = sum(x * y for x, y in zip(a, b))
-    na = math.sqrt(sum(x * x for x in a))
-    nb = math.sqrt(sum(x * x for x in b))
-    return dot / (na * nb + 1e-10)
 
-def search(conn: sqlite3.Connection, q_embedding: list[float], lang: str = "pl", top_k: int = 4):
-    rows = conn.execute(
-        "SELECT id, lang, filename, section, source_label, text, embedding FROM chunks WHERE lang=?",
-        (lang,)
-    ).fetchall()
-    scored = []
-    for row in rows:
-        ch_emb = json.loads(row[6])
-        sim = cosine_similarity(q_embedding, ch_emb)
-        scored.append((sim, row))
-    scored.sort(key=lambda x: x[0], reverse=True)
-    return scored[:top_k]
-
-def main():
-    conn = init_db()
-    langs = sorted(d.name for d in DOCS_ROOT.iterdir() if d.is_dir())
+def index_lang(lang: str) -> int:
+    source_dir = DOCS_ROOT / lang
+    if not source_dir.exists():
+        print(f"[index:{lang}] source dir missing: {source_dir}")
+        return 0
+    files = sorted(source_dir.glob("*.md"))
+    if not files:
+        print(f"[index:{lang}] no *.md files found")
+        return 0
+    conn = init_db(lang)
     total = 0
-    for lang in langs:
-        source_dir = DOCS_ROOT / lang
-        files = sorted(source_dir.glob("*.md"))
-        print(f"\n=== {lang} ({len(files)} files) ===")
-        for path in files:
-            chunks = list(chunk_sections(path, lang))
-            print(f"  {path.name}: {len(chunks)} chunks", end="", flush=True)
-            for chunk in chunks:
+    print(f"[index:{lang}] {len(files)} files")
+    for path in files:
+        chunks = list(chunk_sections(path, lang))
+        print(f"  {path.name}: {len(chunks)} chunks", end="", flush=True)
+        for chunk in chunks:
+            for attempt in range(3):
                 try:
                     emb = embed(chunk["text"])
-                except Exception as e:
-                    print(f" [EMBED ERROR: {e}]", end="", flush=True)
-                    continue
-                conn.execute(
-                    "INSERT INTO chunks(lang,filename,section,document_title,source_label,text,embedding,chunk_index,indexed_at) VALUES(?,?,?,?,?,?,?,?,datetime('now'))",
-                    (chunk["lang"], chunk["filename"], chunk["section"], chunk["document_title"],
-                     chunk["source_label"], chunk["text"], json.dumps(emb), chunk["chunk_index"])
-                )
-                total += 1
-            conn.commit()
-            print(f" ✓")
-    print(f"\n✅ Total: {total} chunks indexed")
+                    break
+                except Exception as exc:
+                    if attempt == 2:
+                        print(f" [EMBED ERROR after 3 retries: {exc}]", end="", flush=True)
+                        emb = None
+                        break
+                    time.sleep(2 ** attempt)
+            if emb is None:
+                continue
+            conn.execute(
+                "INSERT INTO chunks(lang,filename,section,document_title,"
+                "source_label,text,embedding,chunk_index,indexed_at) "
+                "VALUES(?,?,?,?,?,?,?,?,datetime('now'))",
+                (chunk["lang"], chunk["filename"], chunk["section"],
+                 chunk["document_title"], chunk["source_label"], chunk["text"],
+                 json.dumps(emb), chunk["chunk_index"]),
+            )
+            total += 1
+        conn.commit()
+        print(" ✓")
+    conn.close()
+    print(f"[index:{lang}] {total} chunks indexed")
+    return total
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--lang", default="all",
+                        help="language code (pl/en/de) or 'all'")
+    args = parser.parse_args()
+    if args.lang == "all":
+        langs = sorted(d.name for d in DOCS_ROOT.iterdir() if d.is_dir())
+    else:
+        langs = [args.lang]
+    grand = 0
+    for lang in langs:
+        grand += index_lang(lang)
+    print(f"\n✅ Done. {grand} chunks indexed across {len(langs)} languages.")
+
 
 if __name__ == "__main__":
     main()

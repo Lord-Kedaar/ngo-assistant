@@ -28,3 +28,9 @@ Gdy sprawa dotyczy pieniędzy, mediów, danych osobowych, bezpieczeństwa uczest
 ## Dokumentacja grantowa
 Dokumentacja grantowa powinna zawierać właściciela dokumentu, opis związku kosztu z projektem, termin raportu, komplet załączników finansowych oraz informację o brakach do uzupełnienia. Braki zgłasza się przed terminem raportu, nie po jego wysłaniu.
 
+
+
+## Składanie wniosku grantowego
+Wniosek grantowy przygotowuje koordynator wskazany przez zarząd. Składa się go na adres grants@mosty-sasiedzkie.example.org i zawiera: cel projektu, planowany budżet, harmonogram, listę partnerów oraz opis grupy docelowej. Zarząd zatwierdza wniosek przed wysłaniem do grantodawcy.
+## Raport końcowy grantu
+Raport końcowy grantu podpisuje koordynator grantu oraz członek zarządu odpowiedzialny za finanse. Raport zawiera rozliczenie finansowe, opis zrealizowanych działań, listę uczestników i osiągnięte wskaźniki. Termin wysyłki raportu wynika z umowy z grantodawcą — braki zgłasza się przed tym terminem.

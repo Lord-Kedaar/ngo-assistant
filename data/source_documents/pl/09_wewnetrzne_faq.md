@@ -27,3 +27,7 @@ Napisz na `koordynacja@mosty-sasiedzkie.example.org` i poproś o rozmowę wprowa
 
 ## Kiedy skontaktować się z koordynatorem
 Gdy sprawa dotyczy pieniędzy, mediów, danych osobowych, bezpieczeństwa uczestników, sprzętu, dokumentów grantowych albo odstępstwa od procedury.
+
+
+## Praca zdalna jako wolontariusz
+Tak — część zadań wolontariackich można wykonywać zdalnie (np. tłumaczenia, obsługa social media, planowanie wydarzeń, wsparcie techniczne). Decyzję o formie zdalnej podejmuje koordynator po rozmowie wprowadzającej. Wymagane jest regularne uczestnictwo w cotygodniowym spotkaniu zespołu.

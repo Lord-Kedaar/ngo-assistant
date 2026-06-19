@@ -24,3 +24,7 @@ Do not paste personal data, confidential information, non-public budgets, or ful
 
 ## When to contact the coordinator
 When the matter concerns money, media, personal data, participant safety, equipment, grant documents, or deviations from the procedure.
+
+
+## What data am I allowed to send to the assistant
+Only fictional data from the example.org domain may be sent to the AI assistant. Forbidden content includes personal data (names, addresses, phone numbers, private e-mails), confidential foundation data (non-public budgets, donor lists, contracts), full grant documents, and anything that could endanger participants. If in doubt about whether data is acceptable, do not send it and contact the coordinator.

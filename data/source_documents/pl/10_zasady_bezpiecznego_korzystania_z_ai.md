@@ -24,3 +24,7 @@ Do publicznych narzędzi AI nie wklejamy danych osobowych, poufnych, budżetów 
 
 ## Kiedy skontaktować się z koordynatorem
 Gdy sprawa dotyczy pieniędzy, mediów, danych osobowych, bezpieczeństwa uczestników, sprzętu, dokumentów grantowych albo odstępstwa od procedury.
+
+
+## Jakie dane wolno przesyłać do asystenta AI
+Do asystenta AI wolno przesyłać wyłącznie fikcyjne dane z domeny example.org. Zakazane są dane osobowe (imiona, nazwiska, adresy, numery telefonu, e-maile prywatne), dane poufne fundacji (budżety niepubliczne, listy darczyńców, umowy), pełne dokumenty grantowe oraz treści, które mogą narazić uczestników. W razie wątpliwości co do dopuszczalności danych — nie wysyłaj ich i skontaktuj się z koordynatorem.

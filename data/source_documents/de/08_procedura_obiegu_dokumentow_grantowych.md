@@ -27,3 +27,9 @@ Wenn es um Geld, Medien, personenbezogene Daten, die Sicherheit der Teilnehmer, 
 
 ## Zuschussdokumentation
 Die Zuschussdokumentation sollte den Verantwortlichen des Dokuments, eine Beschreibung des Zusammenhangs der Kosten mit dem Projekt, die Berichtsfrist, einen vollständigen Satz an Finanzanhängen sowie Informationen über noch zu ergänzende Mängel enthalten. Mängel müssen vor der Berichtsfrist gemeldet werden, nicht nach deren Absendung.
+
+
+## Einreichen eines Förderantrags
+Einen Förderantrag bereitet der vom Vorstand benannte Koordinator vor. Er wird an grants@nachbarschaftsbruecken.example.org gesendet und enthält: Projektziel, geplantes Budget, Zeitplan, Liste der Partner sowie eine Beschreibung der Zielgruppe. Der Vorstand genehmigt den Antrag vor dem Versand an den Fördergeber.
+## Abschlussbericht des Zuschusses
+Den Abschlussbericht des Zuschusses unterzeichnen der Zuschusskoordinator sowie das für Finanzen zuständige Vorstandsmitglied. Der Bericht enthält die finanzielle Abrechnung, eine Beschreibung der durchgeführten Aktivitäten, eine Liste der Teilnehmer und die erreichten Indikatoren. Die Frist für die Übermittlung ergibt sich aus dem Vertrag mit dem Fördergeber — Mängel sind vor dieser Frist zu melden.
