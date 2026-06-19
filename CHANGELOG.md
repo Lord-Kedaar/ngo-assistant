@@ -1,3 +1,43 @@
+## [2026-06-19] — Frontend null-guard on remaining/limit
+
+### Fixed
+- `null <= 0 === true` triggered quota view despite disabled backend:
+  the App-level guards on remaining (init effect, sync effect,
+  disabled, meta) compared the counter with `<= 0` directly. When the
+  backend returns `remaining: null` (quota disabled), the comparison
+  evaluates to `true` in JavaScript, so the app immediately flipped
+  into the quota-exhausted view — exactly the bug the previous
+  backend fix `4b9d471` was meant to prevent. All four sites are now
+  guarded with `remaining !== null && remaining <= 0`.
+
+- `useState<number>(5)` initial value: the quota counter initialised
+  to a non-null number, which meant the quota view could trigger
+  before `/api/quota` had returned even when the backend would
+  later deliver `null`. Initial values are now `null` for both
+  `remaining` and `limit`.
+
+- `meta` header showed stale counter when quota was null: the
+  header meta now renders `_.app.description` (without the
+  `· X / Y` counter) when either `remaining` or `limit` is `null`.
+
+### Changed
+- frontend/src/App.tsx:
+  - useState<number>(5) -> useState<number | null>(null) for both
+    remaining and limit.
+  - All four `remaining <= 0` checks now guard against null.
+  - meta text renders without the `· remaining / limit` suffix when
+    either value is null.
+
+### Verified
+- `npm run build` passes (223.93 kB JS / 18.31 kB CSS).
+- Service `ngo-ai-demo.service` restarted; `/api/health` returns ok.
+- `/api/status` returns `"questions_per_24h": null`.
+- Quota smoke test: 7/7 requests with the same session_id and
+  quota_enabled=false return HTTP 200 with remaining=None and
+  limit=None — the backend now reliably signals "quota not enforced"
+  and the frontend no longer misinterprets that signal as "quota
+  exhausted".
+
 ## [2026-06-19] — Remove duplicate "5 questions per day" text
 
 ### Fixed

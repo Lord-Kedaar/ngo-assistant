@@ -65,8 +65,8 @@ export function App(): ReactElement {
 
   const [view, setView] = useState<ViewState>({ kind: 'idle' });
   const [modelOnline, setModelOnline] = useState<boolean>(true);
-  const [remaining, setRemaining] = useState<number>(5);
-  const [limit, setLimit] = useState<number>(5);
+  const [remaining, setRemaining] = useState<number | null>(null);
+  const [limit, setLimit] = useState<number | null>(null);
   const [examples, setExamples] = useState<string[]>(_.example_questions);
   const [inputValue, setInputValue] = useState<string>('');
   const [inputHint, setInputHint] = useState<{ kind: 'warn' | 'error'; text: string } | null>(null);
@@ -84,7 +84,7 @@ export function App(): ReactElement {
         const [s, q, ex] = await Promise.allSettled([fetchStatus(), fetchQuota(), fetchExampleQuestions(lang)]);
         if (!mounted) return;
         if (s.status === 'fulfilled') { setModelOnline(s.value.model_available); setLimit(s.value.questions_per_24h || 5); }
-        if (q.status === 'fulfilled') { setRemaining(q.value.remaining); setLimit(q.value.limit || limit); if (q.value.remaining <= 0) setView({ kind: 'quota' }); }
+        if (q.status === 'fulfilled') { setRemaining(q.value.remaining); setLimit(q.value.limit || limit); if (q.value.remaining !== null && q.value.remaining <= 0) setView({ kind: 'quota' }); }
         if (ex.status === 'fulfilled' && ex.value.length > 0) { setExamples(ex.value); }
       } catch {}
     })();
@@ -92,7 +92,7 @@ export function App(): ReactElement {
   }, []);
 
   useEffect(() => {
-    if (remaining <= 0 && view.kind !== 'quota') setView({ kind: 'quota' });
+    if (remaining !== null && remaining <= 0 && view.kind !== 'quota') setView({ kind: 'quota' });
   }, [remaining, view.kind]);
 
   const ask = useCallback(async (raw: string) => {
@@ -154,16 +154,18 @@ export function App(): ReactElement {
     if (view.kind === 'success') setView({ ...view, feedback: value });
   }, [view]);
 
-  const disabled = view.kind === 'loading' || view.kind === 'quota' || remaining <= 0;
+  const disabled = view.kind === 'loading' || view.kind === 'quota' || (remaining !== null && remaining <= 0);
   const isInitialEmpty = view.kind === 'idle';
   const isFilled = view.kind === 'filled';
   const showGreeting = isInitialEmpty || isFilled || (questions.length === 0 && view.kind !== 'quota');
 
   let meta = '';
   let metaKind: 'normal' | 'warn' | 'off' = 'normal';
-  if (view.kind === 'quota' || remaining <= 0) { meta = _.state.quota.title; metaKind = 'warn'; }
+  if (view.kind === 'quota' || (remaining !== null && remaining <= 0)) { meta = _.state.quota.title; metaKind = 'warn'; }
   else if (!modelOnline) { meta = _.state.network_error.title; metaKind = 'off'; }
-  else meta = `${_.app.description} · ${remaining} / ${limit}`;
+  else if (remaining === null || limit === null) meta = _.app.description;
+    else if (remaining === null || limit === null) meta = _.app.description;
+    else meta = `${_.app.description} · ${remaining} / ${limit}`;
 
   return (
     <>
