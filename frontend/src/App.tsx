@@ -186,7 +186,7 @@ export function App(): ReactElement {
         {view.kind === 'quota' && (
           <>
             <ErrorState icon="warn" eyebrow={_.state.quota.eyebrow.replace('{used}', String(limit)).replace('{limit}', String(limit))} title={_.state.quota.title} text={_.state.quota.text}
-              actions={<><button type="button" className="btn-primary">{_.state.quota.text.split('.')[0]}</button><button type="button" className="btn-secondary">{_.source.eyebrow}</button></>}
+              
               extra={<><QuotaMeter used={limit} limit={limit} label={_.quota.label} resetText={_.quota.reset} linkLabel={_.quota.link} /><DisabledComposerNote text={_.state.quota.text} /></>}
             />
             <Composer placeholder={_.placeholder_quota} disabled hint={{ kind: 'error', text: _.state.quota.text }} onSubmit={() => {}} />
