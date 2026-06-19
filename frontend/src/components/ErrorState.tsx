@@ -22,7 +22,7 @@ type Props = {
   icon: IconKind;
   eyebrow: string;
   title: string;
-  text: string;
+  text?: string;
   actions?: ReactNode;
   extra?: ReactNode;
 };
@@ -41,7 +41,7 @@ export function ErrorState({ icon, eyebrow, title, text, actions, extra }: Props
       </div>
       <p className={ec.join(' ')}>{eyebrow}</p>
       <h1>{title}</h1>
-      <p className="state-text">{text}</p>
+      {text && <p className="state-text">{text}</p>}
       {actions && <div className="state-actions">{actions}</div>}
       {extra}
     </section>

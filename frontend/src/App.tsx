@@ -194,7 +194,7 @@ export function App(): ReactElement {
         )}
         {view.kind === 'quota' && (
           <>
-            <ErrorState icon="warn" eyebrow={_.state.quota.eyebrow.replace('{used}', String(limit)).replace('{limit}', String(limit))} title={_.state.quota.title} text={_.state.quota.text}
+            <ErrorState icon="warn" eyebrow={_.state.quota.eyebrow.replace('{used}', String(limit)).replace('{limit}', String(limit))} title={_.state.quota.title}
               
               extra={<><QuotaMeter used={limit} limit={limit} label={_.quota.label} resetText={_.quota.reset} linkLabel={_.quota.link} /><DisabledComposerNote text={_.state.quota.text} /></>}
             />
