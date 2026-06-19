@@ -99,7 +99,6 @@ function Sources({ sources }: { sources: Source[] }): ReactElement {
             <span className="source-badge">{numOf(s.filename)}</span>
             <div style={{ minWidth: 0, flex: 1 }}>
               <div className="source-name">{s.label}</div>
-              <div className="source-excerpt">{s.section}</div>
             </div>
             <span className="source-arrow" aria-hidden="true">↗</span>
           </a>

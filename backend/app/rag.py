@@ -41,15 +41,21 @@ GENERIC_SECTION_KEYWORDS = {
         "operacyjne", "przykladow", "procedur", "krok po kroku",
         "najwazniejsz", "kontaktowac", "kontakt z koordynatorem",
         "kluczowe zasady",
+        "cel dokumentu", "przykladowe pytania operacyjne",
+        "procedura krok po kroku", "najwazniejsze zasady",
     },
     "en": {
         "operational questions", "example", "step-by-step", "step by step",
         "procedure", "key principles", "when to contact", "contact the coordinator",
+        "purpose of the document", "sample operational questions",
+        "example operational questions", "key rules",
     },
     "de": {
         "operative fragen", "beispiel", "beispielfrage", "schritt",
         "verfahren", "grundsatz", "grundsatze", "wann den koordinator",
         "koordinator kontaktieren",
+        "zweck des dokuments", "beispielhafte operative fragen",
+        "wichtigste regeln", "schritt fur schritt verfahren",
     },
 }
 

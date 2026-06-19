@@ -41,7 +41,7 @@ export function QuotaMeter({
         </span>
         <a
           className="quota-link"
-          href="mailto:koordynator@fundacja-mosty.pl?subject=Limit%20pyta%C5%84%20w%20demo"
+          href="mailto:kontakt@radoslaw-pleskot.com?subject=Limit%20pyta%C5%84%20w%20demo%20NGO%20Assistant"
         >
           {linkLabel ?? "Poproś o wyższy limit"}
         </a>

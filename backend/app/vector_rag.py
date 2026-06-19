@@ -149,25 +149,44 @@ class VectorRAG:
             reranked.append((final, row))
         reranked.sort(key=lambda x: x[0], reverse=True)
 
-        # If the top hit lands on a generic section (e.g. "Example
-        # operational questions"), walk down the list and pick the next
-        # chunk from the same document with a concrete section, as long as
-        # it is within 75% of the top score.
-        if reranked and _is_generic(reranked[0][1]["section"]):
-            top_score = reranked[0][0]
-            top_file = reranked[0][1]["filename"]
-            swap = None
-            for sc, row in reranked[1:]:
-                if row["filename"] == top_file and not _is_generic(row["section"]) \
-                        and sc >= top_score * 0.75:
-                    swap = (sc, row)
+        # For each slot we are about to return, if the chosen chunk sits
+        # on a generic boilerplate section (e.g. "Example operational
+        # questions"), try to swap it for a concrete section from the same
+        # document that's still in the reranked list and within 75% of the
+        # slot's score. We track which rows have already been claimed so the
+        # same concrete chunk cannot end up in two slots.
+        used_keys: set[tuple[str, str]] = set()
+
+        def _take(rank: list, want_n: int) -> list:
+            chosen: list = []
+            for sc, row in rank:
+                if len(chosen) >= want_n:
                     break
-            if swap is not None:
-                reranked = [swap] + [(s, r) for s, r in reranked
-                                      if (s, r) != swap]
+                key = (row["filename"], row["section"])
+                if key in used_keys:
+                    continue
+                if _is_generic(row["section"]):
+                    swap = None
+                    for s2, r2 in rank:
+                        k2 = (r2["filename"], r2["section"])
+                        if k2 in used_keys:
+                            continue
+                        if (r2["filename"] == row["filename"]
+                                and not _is_generic(r2["section"])
+                                and s2 >= sc * 0.75):
+                            swap = (s2, r2, k2)
+                            break
+                    if swap is not None:
+                        _, _, k2 = swap
+                        used_keys.add(k2)
+                        chosen.append(swap[:2])
+                        continue
+                used_keys.add(key)
+                chosen.append((sc, row))
+            return chosen
 
         result = []
-        for final_sc, row in reranked[:top_k]:
+        for final_sc, row in _take(reranked, top_k):
             result.append((final_sc, {
                 "text": row["text"],
                 "filename": row["filename"],
