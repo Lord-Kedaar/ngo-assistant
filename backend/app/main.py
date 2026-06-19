@@ -46,7 +46,7 @@ vector_rag.load()
 @app.get('/api/health')
 async def health(): return {'ok':True,'chroma':'local-index','quota_db':'ok','omlx_tunnel':await model_available(),'model_available':await model_available()}
 @app.get('/api/status')
-async def status(): return {'demo':'ready','model_available':await model_available(),'questions_per_24h':settings.session_quota_per_24h}
+async def status(): return {'demo':'ready','model_available':await model_available(),'questions_per_24h':(settings.session_quota_per_24h if settings.quota_enabled else None)}
 @app.get('/api/example-questions')
 def ex(lang: str = 'pl', seed: int | None = None, all: int = 0):
     """Return suggested example questions.
@@ -69,7 +69,7 @@ def ex(lang: str = 'pl', seed: int | None = None, all: int = 0):
     return {'questions': txt.get('examples', EXAMPLES)}
 @app.get('/api/quota')
 def quota(request:Request,response:Response):
- sid=load_session(request.cookies.get('ngo_demo_session','')) or hashlib.sha256(str(time.time()).encode()).hexdigest(); response.set_cookie('ngo_demo_session',signed_session(sid),httponly=True,secure=True,samesite='lax',max_age=86400); return {'remaining':max(0,settings.session_quota_per_24h-count_session(hmac_hash(sid))),'limit':settings.session_quota_per_24h}
+ sid=load_session(request.cookies.get('ngo_demo_session','')) or hashlib.sha256(str(time.time()).encode()).hexdigest(); response.set_cookie('ngo_demo_session',signed_session(sid),httponly=True,secure=True,samesite='lax',max_age=86400); quota_payload = (None, None) if not settings.quota_enabled else (max(0,settings.session_quota_per_24h-count_session(hmac_hash(sid))), settings.session_quota_per_24h); return {'remaining':quota_payload[0],'limit':quota_payload[1]}
 @app.post('/api/chat')
 # Answer mode is controlled by GENERATIVE_MODE. In generative mode, retrieved
 # context is passed to oMLX via complete(); extractive mode remains as rollback.
@@ -80,9 +80,9 @@ async def chat(p:ChatIn,request:Request,response:Response):
  t=time.time(); sid=load_session(request.cookies.get('ngo_demo_session','')) or hashlib.sha256(str(time.time()).encode()).hexdigest(); response.set_cookie('ngo_demo_session',signed_session(sid),httponly=True,secure=True,samesite='lax',max_age=86400); sh=hmac_hash(sid); ip=hmac_hash(request.client.host) if request.client else None
  if p.website: raise HTTPException(400,'Invalid form')
  if settings.quota_enabled and (count_global()>=settings.global_daily_limit or count_session(sh)>=settings.session_quota_per_24h): log_event(sh,ip,'rate_limited'); raise HTTPException(429,'Limit pytań został wykorzystany.')
- if prefilter(p.question): log_event(sh,ip,'out_of_scope'); return {'answer':txt.get('refusal',REFUSAL),'sources':[],'remaining':settings.session_quota_per_24h-count_session(sh)-1}
+ if prefilter(p.question): log_event(sh,ip,'out_of_scope'); rq=(None if not settings.quota_enabled else settings.session_quota_per_24h-count_session(sh)-1); return {'answer':txt.get('refusal',REFUSAL),'sources':[],'remaining':rq}
  hits=vector_rag.search(p.question, lang); best=hits[0][0] if hits else 0
- if not hits or best<settings.retrieval_min_score: log_event(sh,ip,'out_of_scope',0,best,0); return {'answer':txt.get('refusal',REFUSAL),'sources':[],'remaining':settings.session_quota_per_24h-count_session(sh)-1}
+ if not hits or best<settings.retrieval_min_score: log_event(sh,ip,'out_of_scope',0,best,0); rq=(None if not settings.quota_enabled else settings.session_quota_per_24h-count_session(sh)-1); return {'answer':txt.get('refusal',REFUSAL),'sources':[],'remaining':rq}
  if sem.locked(): raise HTTPException(503,'Model obsługuje już jedno pytanie. Spróbuj za chwilę.')
  if not await model_available(): log_event(sh,ip,'model_offline'); raise HTTPException(503,'Model lokalny jest obecnie niedostępny.')
  async with sem:
@@ -103,7 +103,7 @@ async def chat(p:ChatIn,request:Request,response:Response):
    raw=await complete(messages); raw=re.sub(r'\s*\[(Źródło|Source|Quelle):[^\]]+\]\s*',' ',raw).strip(); ans=sanitize_markdown(raw + '\n\n['+txt.get('source_label','Źródło')+': '+display_source(lang, best_chunk['filename'], best_chunk['section_title'])+']')
   else:
    ans=sanitize_markdown(excerpt + '\n\n['+txt.get('source_label','Źródło')+': '+display_source(lang, best_chunk['filename'], best_chunk['section_title'])+']')
- log_event(sh,ip,'success',int((time.time()-t)*1000),best,len(hits)); return {'answer':ans,'sources':[{'filename':display_filename(lang, c['filename']),'section':c['section_title'],'label':display_source(lang, c['filename'], c['section_title']),'score':round(s,3)} for s,c in hits],'remaining':max(0,settings.session_quota_per_24h-count_session(sh))}
+ log_event(sh,ip,'success',int((time.time()-t)*1000),best,len(hits)); rq=(None if not settings.quota_enabled else max(0,settings.session_quota_per_24h-count_session(sh))); return {'answer':ans,'sources':[{'filename':display_filename(lang, c['filename']),'section':c['section_title'],'label':display_source(lang, c['filename'], c['section_title']),'score':round(s,3)} for s,c in hits],'remaining':rq}
 @app.get('/privacy')
 def privacy(): return HTMLResponse('<h1>Prywatność demo</h1><p>Nie zapisujemy treści pytań domyślnie. Nie wpisuj danych osobowych.</p>')
 @app.get('/robots.txt')

@@ -8,13 +8,18 @@ export function QuotaMeter({
   resetText,
   linkLabel,
 }: {
-  used: number;
-  limit: number;
+  used: number | null;
+  limit: number | null;
   label?: string;
   resetText?: string;
   linkLabel?: string;
 }): ReactElement {
   const loc = getLocale();
+  // When the backend reports quota_enabled=false, used/limit are null.
+  // Hide the meter entirely so the user does not see a fake countdown.
+  if (used === null || limit === null) {
+    return <></>;
+  }
   const pct = limit > 0 ? Math.min(100, Math.round((used / limit) * 100)) : 100;
   const pctStr = `${pct}%`;
   return (
