@@ -33,3 +33,12 @@ Die Zuschussdokumentation sollte den Verantwortlichen des Dokuments, eine Beschr
 Einen Förderantrag bereitet der vom Vorstand benannte Koordinator vor. Er wird an grants@nachbarschaftsbruecken.example.org gesendet und enthält: Projektziel, geplantes Budget, Zeitplan, Liste der Partner sowie eine Beschreibung der Zielgruppe. Der Vorstand genehmigt den Antrag vor dem Versand an den Fördergeber.
 ## Abschlussbericht des Zuschusses
 Den Abschlussbericht des Zuschusses unterzeichnen der Zuschusskoordinator sowie das für Finanzen zuständige Vorstandsmitglied. Der Bericht enthält die finanzielle Abrechnung, eine Beschreibung der durchgeführten Aktivitäten, eine Liste der Teilnehmer und die erreichten Indikatoren. Die Frist für die Übermittlung ergibt sich aus dem Vertrag mit dem Fördergeber — Mängel sind vor dieser Frist zu melden.
+
+## Wo Sie dieses Dokument finden
+Das Dokument ist an drei Orten verfügbar:
+- Stiftungs-Website: https://mosty-sasiedzkie.example.org/de/dokumente/08-dokumenty-grantowe
+  (Anmeldung mit Freiwilligenkonto erforderlich).
+- Stiftungssitz: ul. Sąsiedzka 12, 00-000 Warschau,
+  geöffnet Mo.–Fr. 9:00–17:00 — Ausdruck vor Ort.
+- Auf Anfrage: Der Koordinator sendet die Datei per E-Mail
+  (koordination@nachbarschaftsbruecken.example.org).

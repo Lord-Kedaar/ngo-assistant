@@ -30,3 +30,12 @@ When the matter concerns money, media, personal data, participant safety, equipm
 
 ## Documents required from a new volunteer
 A new volunteer signs a volunteer agreement and organizational consents. Before signing, they complete an application form. Once the documents are complete, the coordinator assigns a supervisor and admits the volunteer to their first shift.
+
+## Where to find this document
+The document is available in three places:
+- Foundation website: https://mosty-sasiedzkie.example.org/en/documents/02-podrecznik-wolontariusza
+  (requires a volunteer account login).
+- Foundation office: ul. Sąsiedzka 12, 00-000 Warsaw,
+  open Mon–Fri 9:00–17:00 — printed copy on request.
+- On request: the coordinator will email the file
+  (coordination@bridges-neighbors.example.org).

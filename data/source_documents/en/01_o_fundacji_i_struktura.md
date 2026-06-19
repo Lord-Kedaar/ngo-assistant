@@ -24,3 +24,12 @@ The Board approves directions of activities and expenditures exceeding 1,500 PLN
 
 ## When to contact the coordinator
 When the matter concerns money, media, personal data, participant safety, equipment, grant documents, or deviations from the procedure.
+
+## Where to find this document
+The document is available in three places:
+- Foundation website: https://mosty-sasiedzkie.example.org/en/documents/01-o-fundacji
+  (requires a volunteer account login).
+- Foundation office: ul. Sąsiedzka 12, 00-000 Warsaw,
+  open Mon–Fri 9:00–17:00 — printed copy on request.
+- On request: the coordinator will email the file
+  (coordination@bridges-neighbors.example.org).

@@ -1,3 +1,41 @@
+## [2026-06-19] — "Gdzie znaleźć" sections in every document
+
+### Added
+- **Per-document availability section:** every source document across
+  PL / EN / DE (30 files total) now ends with a dedicated section
+  describing where the document lives — fake fundacja website
+  (`https://mosty-sasiedzkie.example.org/...`), physical headquarters
+  (`ul. Sąsiedzka 12, 00-000 Warszawa`, Mon–Fri 9:00–17:00), and the
+  coordinator email fallback. Section titles are localized
+  (`Gdzie znaleźć ten dokument` / `Where to find this document` /
+  `Wo Sie dieses Dokument finden`) so retrieval matches the user's
+  query language exactly.
+
+### Verified
+- **PL:** "Gdzie znajdę podręcznik wolontariusza?" → top source
+  `02_podrecznik_wolontariusza.md / Gdzie znaleźć ten dokument`
+  (score 0.900), 2/4 sources are the new section.
+- **EN:** "Where can I find the volunteer handbook?" → top source
+  `02_volunteer_handbook.md / Where to find this document` (score 0.911).
+- **DE:** "Wo finde ich das Handbuch für Freiwillige?" → top source
+  `02_handbuch_fuer_freiwillige.md / Wo Sie dieses Dokument finden`
+  (score 0.898).
+- **No regression:** generic-swap fix from the previous commit still
+  works — "Ile dni mam na rozliczenie wydatku?" still returns
+  `05_...Jak rozliczyć zakup materiałów` on top, not the boilerplate
+  `Cel dokumentu`.
+- **Vector indices reindexed:** `embeddings-{pl,en,de}.sqlite3` now
+  hold 76 chunks each (was 60) — 16 new chunks, one per document per
+  language. Reindex ran via `python3 scripts/index_embeddings.py
+  --lang {pl,en,de}` with `OMLX_*` env loaded from `.env`; **all three
+  langs are non-empty** after the reindex.
+
+### Operational
+- Backup of pre-change source tree at
+  `.bak-20260619-192535-where-to-find/source_documents/` (full copy).
+- Idempotent reapply script kept at `/tmp/append_where_to_find.py` —
+  second run reports `skip (already present)` for all 30 files.
+
 ## [2026-06-19] — Sources duplicate + quota link fix
 
 ### Fixed
@@ -30,5 +68,3 @@
 - API: `/api/chat` for "Ile dni mam na rozliczenie wydatku?" now returns
   `05_...Jak rozliczyć zakup materiałów` (was: `05_...Cel dokumentu`),
   with three additional concrete sections from related documents.
-
-

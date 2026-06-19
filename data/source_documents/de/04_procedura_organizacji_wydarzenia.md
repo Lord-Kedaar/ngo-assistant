@@ -34,3 +34,12 @@ Kosten bis zu 150 PLN werden vom Koordinator genehmigt. Kosten zwischen 150 und 
 
 ## Maximales Workshop-Budget ohne Vorstandsgenehmigung
 Ein Workshop mit einem Budget bis 150 PLN wird vom Veranstaltungskoordinator allein genehmigt. Ein Budget von 150 bis 1500 PLN erfordert die Zustimmung des Finanzteams. Ein Budget über 1500 PLN erfordert die formelle Genehmigung des Vorstands — der Antrag mit Zeitplan und Kostenvoranschlag wird an vorstand@nachbarschaftsbruecken.example.org mindestens 14 Tage vor dem geplanten Termin gesendet.
+
+## Wo Sie dieses Dokument finden
+Das Dokument ist an drei Orten verfügbar:
+- Stiftungs-Website: https://mosty-sasiedzkie.example.org/de/dokumente/04-organizacja-wydarzenia
+  (Anmeldung mit Freiwilligenkonto erforderlich).
+- Stiftungssitz: ul. Sąsiedzka 12, 00-000 Warschau,
+  geöffnet Mo.–Fr. 9:00–17:00 — Ausdruck vor Ort.
+- Auf Anfrage: Der Koordinator sendet die Datei per E-Mail
+  (koordination@nachbarschaftsbruecken.example.org).

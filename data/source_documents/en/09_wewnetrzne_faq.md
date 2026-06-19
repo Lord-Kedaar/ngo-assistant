@@ -31,3 +31,12 @@ When the matter concerns money, media, personal data, participant safety, equipm
 
 ## Working remotely as a volunteer
 Yes — many volunteer tasks can be done remotely (e.g. translations, social media management, event planning, technical support). The decision about the remote form is made by the coordinator after the introductory interview. Regular attendance at the weekly team meeting is required.
+
+## Where to find this document
+The document is available in three places:
+- Foundation website: https://mosty-sasiedzkie.example.org/en/documents/09-faq-wewnetrzne
+  (requires a volunteer account login).
+- Foundation office: ul. Sąsiedzka 12, 00-000 Warsaw,
+  open Mon–Fri 9:00–17:00 — printed copy on request.
+- On request: the coordinator will email the file
+  (coordination@bridges-neighbors.example.org).

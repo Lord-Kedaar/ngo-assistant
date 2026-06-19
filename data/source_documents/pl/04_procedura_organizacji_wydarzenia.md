@@ -35,3 +35,12 @@ Koszty wydarzenia do 150 zł zatwierdza koordynator. Koszty od 150 do 1500 zł z
 
 ## Maksymalny budżet warsztatu bez zgody zarządu
 Warsztat z budżetem do 150 zł zatwierdza koordynator wydarzeń samodzielnie. Budżet od 150 do 1500 zł wymaga zgody zespołu finansów. Budżet powyżej 1500 zł wymaga formalnej zgody zarządu — wniosek z harmonogramem i kosztorysem wysyła się na zarząd@mosty-sasiedzkie.example.org minimum 14 dni przed planowanym terminem.
+
+## Gdzie znaleźć ten dokument
+Dokument jest dostępny w trzech miejscach:
+- Strona fundacji: https://mosty-sasiedzkie.example.org/dokumenty/04-organizacja-wydarzenia
+  (wymaga logowania kontem wolontariusza).
+- Siedziba fundacji: ul. Sąsiedzka 12, 00-000 Warszawa,
+  biuro czynne pon.–pt. 9:00–17:00 — wydruk na miejscu.
+- Na życzenie: koordynator prześle plik mailem
+  (koordynacja@mosty-sasiedzkie.example.org).

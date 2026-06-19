@@ -27,3 +27,12 @@ Wenn die Angelegenheit Geld, Medien, personenbezogene Daten, die Sicherheit der 
 
 ## So leihen Sie einen Beamer aus
 Der Beamer muss mindestens 3 Tage im Voraus reserviert werden. In der Anmeldung müssen das Datum, der Veranstaltungsort, die für Abholung und Rückgabe verantwortliche Person sowie die Information, ob ein HDMI-Kabel oder eine Leinwand benötigt wird, angegeben werden. Die Rückgabe des Beamers wird durch einen Eintrag im Geräteregister bestätigt.
+
+## Wo Sie dieses Dokument finden
+Das Dokument ist an drei Orten verfügbar:
+- Stiftungs-Website: https://mosty-sasiedzkie.example.org/de/dokumente/06-wypozyczanie-sprzetu
+  (Anmeldung mit Freiwilligenkonto erforderlich).
+- Stiftungssitz: ul. Sąsiedzka 12, 00-000 Warschau,
+  geöffnet Mo.–Fr. 9:00–17:00 — Ausdruck vor Ort.
+- Auf Anfrage: Der Koordinator sendet die Datei per E-Mail
+  (koordination@nachbarschaftsbruecken.example.org).

@@ -28,3 +28,12 @@ Gdy sprawa dotyczy pieniędzy, mediów, danych osobowych, bezpieczeństwa uczest
 
 ## Jakie dane wolno przesyłać do asystenta AI
 Do asystenta AI wolno przesyłać wyłącznie fikcyjne dane z domeny example.org. Zakazane są dane osobowe (imiona, nazwiska, adresy, numery telefonu, e-maile prywatne), dane poufne fundacji (budżety niepubliczne, listy darczyńców, umowy), pełne dokumenty grantowe oraz treści, które mogą narazić uczestników. W razie wątpliwości co do dopuszczalności danych — nie wysyłaj ich i skontaktuj się z koordynatorem.
+
+## Gdzie znaleźć ten dokument
+Dokument jest dostępny w trzech miejscach:
+- Strona fundacji: https://mosty-sasiedzkie.example.org/dokumenty/10-zasady-ai
+  (wymaga logowania kontem wolontariusza).
+- Siedziba fundacji: ul. Sąsiedzka 12, 00-000 Warszawa,
+  biuro czynne pon.–pt. 9:00–17:00 — wydruk na miejscu.
+- Na życzenie: koordynator prześle plik mailem
+  (koordynacja@mosty-sasiedzkie.example.org).

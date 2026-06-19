@@ -28,3 +28,12 @@ Wenn die Angelegenheit Geld, Medien, personenbezogene Daten, die Sicherheit der 
 
 ## Welche Daten darf ich an den Assistenten senden
 An den KI-Assistenten dürfen ausschließlich fiktive Daten aus der Domain example.org gesendet werden. Verboten sind personenbezogene Daten (Namen, Adressen, Telefonnummern, private E-Mails), vertrauliche Stiftungsdaten (nicht-öffentliche Budgets, Spenderlisten, Verträge), vollständige Förderdokumente sowie Inhalte, die Teilnehmer gefährden könnten. Im Zweifel über die Zulässigkeit von Daten — nicht senden und den Koordinator kontaktieren.
+
+## Wo Sie dieses Dokument finden
+Das Dokument ist an drei Orten verfügbar:
+- Stiftungs-Website: https://mosty-sasiedzkie.example.org/de/dokumente/10-zasady-ai
+  (Anmeldung mit Freiwilligenkonto erforderlich).
+- Stiftungssitz: ul. Sąsiedzka 12, 00-000 Warschau,
+  geöffnet Mo.–Fr. 9:00–17:00 — Ausdruck vor Ort.
+- Auf Anfrage: Der Koordinator sendet die Datei per E-Mail
+  (koordination@nachbarschaftsbruecken.example.org).

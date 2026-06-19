@@ -24,3 +24,12 @@ Zarząd zatwierdza kierunki działań i wydatki powyżej 1500 zł. Koordynator w
 
 ## Kiedy skontaktować się z koordynatorem
 Gdy sprawa dotyczy pieniędzy, mediów, danych osobowych, bezpieczeństwa uczestników, sprzętu, dokumentów grantowych albo odstępstwa od procedury.
+
+## Gdzie znaleźć ten dokument
+Dokument jest dostępny w trzech miejscach:
+- Strona fundacji: https://mosty-sasiedzkie.example.org/dokumenty/01-o-fundacji
+  (wymaga logowania kontem wolontariusza).
+- Siedziba fundacji: ul. Sąsiedzka 12, 00-000 Warszawa,
+  biuro czynne pon.–pt. 9:00–17:00 — wydruk na miejscu.
+- Na życzenie: koordynator prześle plik mailem
+  (koordynacja@mosty-sasiedzkie.example.org).

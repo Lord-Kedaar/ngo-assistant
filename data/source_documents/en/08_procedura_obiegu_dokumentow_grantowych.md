@@ -33,3 +33,12 @@ Grant documentation should include the document owner, a description of the cost
 A grant application is prepared by the coordinator designated by the board. It is sent to grants@bridges-neighbors.example.org and includes: the project objective, planned budget, timeline, list of partners, and a description of the target group. The board approves the application before it is sent to the funder.
 ## Final grant report
 The final grant report is signed by the grant coordinator and the board member responsible for finance. The report contains a financial settlement, a description of activities carried out, a list of participants, and achieved indicators. The deadline for sending the report is set by the funder contract — any deficiencies must be reported before that deadline.
+
+## Where to find this document
+The document is available in three places:
+- Foundation website: https://mosty-sasiedzkie.example.org/en/documents/08-dokumenty-grantowe
+  (requires a volunteer account login).
+- Foundation office: ul. Sąsiedzka 12, 00-000 Warsaw,
+  open Mon–Fri 9:00–17:00 — printed copy on request.
+- On request: the coordinator will email the file
+  (coordination@bridges-neighbors.example.org).

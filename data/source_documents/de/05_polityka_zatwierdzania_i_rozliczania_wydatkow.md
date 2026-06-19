@@ -27,3 +27,12 @@ Wenn die Angelegenheit Geld, Medien, personenbezogene Daten, die Sicherheit der 
 
 ## Abrechnung des Materialeinkaufs
 Der Einkauf von Materialien wird abgerechnet, indem der Kaufbeleg innerhalb von 7 Tagen an das Finanzteam gesendet wird. In der Meldung müssen der Name der Veranstaltung oder des Projekts, der Betrag, eine Beschreibung des Zusammenhangs des Kaufs mit der Tätigkeit der Stiftung angegeben und die Rechnung oder Quittung beigefügt werden. Wenn die Kosten 150 PLN überschreiten, ist vor dem Kauf eine Genehmigung der Finanzabteilung erforderlich; über 1500 PLN entscheidet der Vorstand.
+
+## Wo Sie dieses Dokument finden
+Das Dokument ist an drei Orten verfügbar:
+- Stiftungs-Website: https://mosty-sasiedzkie.example.org/de/dokumente/05-polityka-wydatkow
+  (Anmeldung mit Freiwilligenkonto erforderlich).
+- Stiftungssitz: ul. Sąsiedzka 12, 00-000 Warschau,
+  geöffnet Mo.–Fr. 9:00–17:00 — Ausdruck vor Ort.
+- Auf Anfrage: Der Koordinator sendet die Datei per E-Mail
+  (koordination@nachbarschaftsbruecken.example.org).

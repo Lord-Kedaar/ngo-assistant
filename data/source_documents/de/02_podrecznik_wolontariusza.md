@@ -30,3 +30,12 @@ Wenn es um Geld, Medien, personenbezogene Daten, die Sicherheit der Teilnehmer, 
 
 ## Erforderliche Dokumente für neue Freiwillige
 Ein neuer Freiwilliger unterzeichnet die Freiwilligenvereinbarung sowie die organisatorischen Einverständniserklärungen. Vor der Unterzeichnung füllt er das Anmeldeformular aus. Nach Vorliegen der vollständigen Dokumente teilt der Koordinator einen Mentor zu und lässt den Freiwilligen zum ersten Einsatz zu.
+
+## Wo Sie dieses Dokument finden
+Das Dokument ist an drei Orten verfügbar:
+- Stiftungs-Website: https://mosty-sasiedzkie.example.org/de/dokumente/02-podrecznik-wolontariusza
+  (Anmeldung mit Freiwilligenkonto erforderlich).
+- Stiftungssitz: ul. Sąsiedzka 12, 00-000 Warschau,
+  geöffnet Mo.–Fr. 9:00–17:00 — Ausdruck vor Ort.
+- Auf Anfrage: Der Koordinator sendet die Datei per E-Mail
+  (koordination@nachbarschaftsbruecken.example.org).

@@ -28,3 +28,11 @@ Gdy sprawa dotyczy pieniędzy, mediów, danych osobowych, bezpieczeństwa uczest
 ## Jak rozliczyć zakup materiałów
 Zakup materiałów rozlicza się przez przesłanie dokumentu zakupu do zespołu finansów w ciągu 7 dni. W zgłoszeniu trzeba podać nazwę wydarzenia lub projektu, kwotę, opis związku zakupu z działaniem fundacji oraz załączyć fakturę albo rachunek. Jeśli koszt przekracza 150 zł, przed zakupem wymagana jest akceptacja finansów; powyżej 1500 zł decyzję podejmuje zarząd.
 
+## Gdzie znaleźć ten dokument
+Dokument jest dostępny w trzech miejscach:
+- Strona fundacji: https://mosty-sasiedzkie.example.org/dokumenty/05-polityka-wydatkow
+  (wymaga logowania kontem wolontariusza).
+- Siedziba fundacji: ul. Sąsiedzka 12, 00-000 Warszawa,
+  biuro czynne pon.–pt. 9:00–17:00 — wydruk na miejscu.
+- Na życzenie: koordynator prześle plik mailem
+  (koordynacja@mosty-sasiedzkie.example.org).

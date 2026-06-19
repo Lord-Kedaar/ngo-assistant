@@ -31,3 +31,12 @@ Social media posts may be published by a member of the communications team or a 
 
 ## Can a volunteer publish posts on their own
 A volunteer does not publish posts on their own. Posts are published only by a person designated by the board (usually a member of the communications team). Post content must be approved by the communications team before publication. A volunteer may propose content, but cannot publish it without approval.
+
+## Where to find this document
+The document is available in three places:
+- Foundation website: https://mosty-sasiedzkie.example.org/en/documents/07-komunikacja-i-social-media
+  (requires a volunteer account login).
+- Foundation office: ul. Sąsiedzka 12, 00-000 Warsaw,
+  open Mon–Fri 9:00–17:00 — printed copy on request.
+- On request: the coordinator will email the file
+  (coordination@bridges-neighbors.example.org).

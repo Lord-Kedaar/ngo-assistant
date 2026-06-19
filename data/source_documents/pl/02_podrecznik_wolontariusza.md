@@ -31,3 +31,11 @@ Gdy sprawa dotyczy pieniędzy, mediów, danych osobowych, bezpieczeństwa uczest
 ## Dokumenty wymagane od nowego wolontariusza
 Nowy wolontariusz podpisuje porozumienie wolontariackie oraz zgody organizacyjne. Przed podpisaniem uzupełnia formularz zgłoszeniowy. Po komplecie dokumentów koordynator przydziela opiekuna i dopuszcza wolontariusza do pierwszego dyżuru.
 
+## Gdzie znaleźć ten dokument
+Dokument jest dostępny w trzech miejscach:
+- Strona fundacji: https://mosty-sasiedzkie.example.org/dokumenty/02-podrecznik-wolontariusza
+  (wymaga logowania kontem wolontariusza).
+- Siedziba fundacji: ul. Sąsiedzka 12, 00-000 Warszawa,
+  biuro czynne pon.–pt. 9:00–17:00 — wydruk na miejscu.
+- Na życzenie: koordynator prześle plik mailem
+  (koordynacja@mosty-sasiedzkie.example.org).

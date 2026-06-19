@@ -31,3 +31,12 @@ Gdy sprawa dotyczy pieniędzy, mediów, danych osobowych, bezpieczeństwa uczest
 
 ## Praca zdalna jako wolontariusz
 Tak — część zadań wolontariackich można wykonywać zdalnie (np. tłumaczenia, obsługa social media, planowanie wydarzeń, wsparcie techniczne). Decyzję o formie zdalnej podejmuje koordynator po rozmowie wprowadzającej. Wymagane jest regularne uczestnictwo w cotygodniowym spotkaniu zespołu.
+
+## Gdzie znaleźć ten dokument
+Dokument jest dostępny w trzech miejscach:
+- Strona fundacji: https://mosty-sasiedzkie.example.org/dokumenty/09-faq-wewnetrzne
+  (wymaga logowania kontem wolontariusza).
+- Siedziba fundacji: ul. Sąsiedzka 12, 00-000 Warszawa,
+  biuro czynne pon.–pt. 9:00–17:00 — wydruk na miejscu.
+- Na życzenie: koordynator prześle plik mailem
+  (koordynacja@mosty-sasiedzkie.example.org).

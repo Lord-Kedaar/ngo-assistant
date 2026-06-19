@@ -28,3 +28,12 @@ When the matter concerns money, media, personal data, participant safety, equipm
 
 ## What data am I allowed to send to the assistant
 Only fictional data from the example.org domain may be sent to the AI assistant. Forbidden content includes personal data (names, addresses, phone numbers, private e-mails), confidential foundation data (non-public budgets, donor lists, contracts), full grant documents, and anything that could endanger participants. If in doubt about whether data is acceptable, do not send it and contact the coordinator.
+
+## Where to find this document
+The document is available in three places:
+- Foundation website: https://mosty-sasiedzkie.example.org/en/documents/10-zasady-ai
+  (requires a volunteer account login).
+- Foundation office: ul. Sąsiedzka 12, 00-000 Warsaw,
+  open Mon–Fri 9:00–17:00 — printed copy on request.
+- On request: the coordinator will email the file
+  (coordination@bridges-neighbors.example.org).

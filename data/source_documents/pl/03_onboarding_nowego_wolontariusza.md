@@ -28,3 +28,11 @@ Gdy sprawa dotyczy pieniędzy, mediów, danych osobowych, bezpieczeństwa uczest
 ## Dokumenty w dniach 1-3
 W dniach 1-3 onboardingu kandydat uzupełnia formularz zgłoszeniowy, podpisuje porozumienie wolontariackie i zgody organizacyjne. Brak któregokolwiek z tych dokumentów oznacza, że wolontariusz nie zaczyna samodzielnego dyżuru.
 
+## Gdzie znaleźć ten dokument
+Dokument jest dostępny w trzech miejscach:
+- Strona fundacji: https://mosty-sasiedzkie.example.org/dokumenty/03-onboarding
+  (wymaga logowania kontem wolontariusza).
+- Siedziba fundacji: ul. Sąsiedzka 12, 00-000 Warszawa,
+  biuro czynne pon.–pt. 9:00–17:00 — wydruk na miejscu.
+- Na życzenie: koordynator prześle plik mailem
+  (koordynacja@mosty-sasiedzkie.example.org).

@@ -32,3 +32,12 @@ Posty w social media może publikować osoba z zespołu komunikacji albo osoba w
 
 ## Czy wolontariusz może samodzielnie publikować posty
 Wolontariusz nie publikuje postów samodzielnie. Każdy post publikuje osoba wyznaczona przez zarząd (zwykle członek zespołu komunikacji). Treść posta musi być przed publikacją zatwierdzona przez zespół komunikacji. Wolontariusz może zaproponować treść, ale nie może jej opublikować bez akceptacji.
+
+## Gdzie znaleźć ten dokument
+Dokument jest dostępny w trzech miejscach:
+- Strona fundacji: https://mosty-sasiedzkie.example.org/dokumenty/07-komunikacja-i-social-media
+  (wymaga logowania kontem wolontariusza).
+- Siedziba fundacji: ul. Sąsiedzka 12, 00-000 Warszawa,
+  biuro czynne pon.–pt. 9:00–17:00 — wydruk na miejscu.
+- Na życzenie: koordynator prześle plik mailem
+  (koordynacja@mosty-sasiedzkie.example.org).

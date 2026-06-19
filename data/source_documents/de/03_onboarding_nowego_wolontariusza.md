@@ -27,3 +27,12 @@ Wenn es um Geld, Medien, personenbezogene Daten, die Sicherheit der Teilnehmer, 
 
 ## Dokumente in den Tagen 1-3
 In den Tagen 1-3 des Onboardings füllt der Kandidat das Anmeldeformular aus, unterzeichnet die Freiwilligenvereinbarung sowie die organisatorischen Einverständniserklärungen. Das Fehlen eines dieser Dokumente bedeutet, dass der Freiwillige keinen eigenständigen Einsatz beginnt.
+
+## Wo Sie dieses Dokument finden
+Das Dokument ist an drei Orten verfügbar:
+- Stiftungs-Website: https://mosty-sasiedzkie.example.org/de/dokumente/03-onboarding
+  (Anmeldung mit Freiwilligenkonto erforderlich).
+- Stiftungssitz: ul. Sąsiedzka 12, 00-000 Warschau,
+  geöffnet Mo.–Fr. 9:00–17:00 — Ausdruck vor Ort.
+- Auf Anfrage: Der Koordinator sendet die Datei per E-Mail
+  (koordination@nachbarschaftsbruecken.example.org).

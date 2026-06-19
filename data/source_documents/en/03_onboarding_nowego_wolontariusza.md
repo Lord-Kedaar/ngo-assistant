@@ -27,3 +27,12 @@ When the matter concerns money, media, personal data, participant safety, equipm
 
 ## Documents in days 1-3
 During days 1-3 of onboarding, the candidate completes an application form, signs a volunteer agreement, and organizational consents. The absence of any of these documents means that the volunteer does not begin an independent shift.
+
+## Where to find this document
+The document is available in three places:
+- Foundation website: https://mosty-sasiedzkie.example.org/en/documents/03-onboarding
+  (requires a volunteer account login).
+- Foundation office: ul. Sąsiedzka 12, 00-000 Warsaw,
+  open Mon–Fri 9:00–17:00 — printed copy on request.
+- On request: the coordinator will email the file
+  (coordination@bridges-neighbors.example.org).

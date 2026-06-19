@@ -31,3 +31,12 @@ Wenn es um Geld, Medien, personenbezogene Daten, die Sicherheit der Teilnehmer, 
 
 ## Remote-Arbeit als Freiwilliger
 Ja — viele Freiwilligenaufgaben können remote erledigt werden (z. B. Übersetzungen, Social-Media-Betreuung, Veranstaltungsplanung, technische Unterstützung). Die Entscheidung über die Remote-Form trifft der Koordinator nach dem Einführungsgespräch. Voraussetzung ist die regelmäßige Teilnahme am wöchentlichen Teamtreffen.
+
+## Wo Sie dieses Dokument finden
+Das Dokument ist an drei Orten verfügbar:
+- Stiftungs-Website: https://mosty-sasiedzkie.example.org/de/dokumente/09-faq-wewnetrzne
+  (Anmeldung mit Freiwilligenkonto erforderlich).
+- Stiftungssitz: ul. Sąsiedzka 12, 00-000 Warschau,
+  geöffnet Mo.–Fr. 9:00–17:00 — Ausdruck vor Ort.
+- Auf Anfrage: Der Koordinator sendet die Datei per E-Mail
+  (koordination@nachbarschaftsbruecken.example.org).

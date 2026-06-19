@@ -31,3 +31,12 @@ Beiträge in sozialen Medien können von einer Person aus dem Kommunikationsteam
 
 ## Darf ein Freiwilliger selbst Beiträge veröffentlichen
 Ein Freiwilliger veröffentlicht keine Beiträge eigenständig. Beiträge werden ausschließlich von einer vom Vorstand benannten Person veröffentlicht (in der Regel ein Mitglied des Kommunikationsteams). Der Inhalt des Beitrags muss vor der Veröffentlichung vom Kommunikationsteam genehmigt werden. Ein Freiwilliger kann Inhalte vorschlagen, sie aber nicht ohne Genehmigung veröffentlichen.
+
+## Wo Sie dieses Dokument finden
+Das Dokument ist an drei Orten verfügbar:
+- Stiftungs-Website: https://mosty-sasiedzkie.example.org/de/dokumente/07-komunikacja-i-social-media
+  (Anmeldung mit Freiwilligenkonto erforderlich).
+- Stiftungssitz: ul. Sąsiedzka 12, 00-000 Warschau,
+  geöffnet Mo.–Fr. 9:00–17:00 — Ausdruck vor Ort.
+- Auf Anfrage: Der Koordinator sendet die Datei per E-Mail
+  (koordination@nachbarschaftsbruecken.example.org).

@@ -28,3 +28,11 @@ Gdy sprawa dotyczy pieniędzy, mediów, danych osobowych, bezpieczeństwa uczest
 ## Jak wypożyczyć projektor
 Projektor rezerwuje się minimum 3 dni wcześniej. W zgłoszeniu należy podać termin, miejsce wydarzenia, osobę odpowiedzialną za odbiór i zwrot oraz informację, czy potrzebny jest kabel HDMI lub ekran. Zwrot projektora potwierdza się wpisem w rejestrze sprzętu.
 
+## Gdzie znaleźć ten dokument
+Dokument jest dostępny w trzech miejscach:
+- Strona fundacji: https://mosty-sasiedzkie.example.org/dokumenty/06-wypozyczanie-sprzetu
+  (wymaga logowania kontem wolontariusza).
+- Siedziba fundacji: ul. Sąsiedzka 12, 00-000 Warszawa,
+  biuro czynne pon.–pt. 9:00–17:00 — wydruk na miejscu.
+- Na życzenie: koordynator prześle plik mailem
+  (koordynacja@mosty-sasiedzkie.example.org).

@@ -27,3 +27,12 @@ When the matter concerns money, media, personal data, participant safety, equipm
 
 ## How to settle material purchases
 Material purchases are settled by sending the purchase document to the finance team within 7 days. The submission must include the name of the event or project, the amount, a description of how the purchase relates to the foundation's activities, and an attached invoice or receipt. If the cost exceeds PLN 150, finance approval is required before purchase; for amounts above PLN 1500, the decision is made by the board.
+
+## Where to find this document
+The document is available in three places:
+- Foundation website: https://mosty-sasiedzkie.example.org/en/documents/05-polityka-wydatkow
+  (requires a volunteer account login).
+- Foundation office: ul. Sąsiedzka 12, 00-000 Warsaw,
+  open Mon–Fri 9:00–17:00 — printed copy on request.
+- On request: the coordinator will email the file
+  (coordination@bridges-neighbors.example.org).

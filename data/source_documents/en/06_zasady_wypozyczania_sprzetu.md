@@ -27,3 +27,12 @@ When the matter concerns money, media, personal data, participant safety, equipm
 
 ## How to rent a projector
 Projectors must be reserved at least 3 days in advance. The application must include the date, event location, the person responsible for pickup and return, and information on whether an HDMI cable or a screen is required. The return of the projector is confirmed by an entry in the equipment register.
+
+## Where to find this document
+The document is available in three places:
+- Foundation website: https://mosty-sasiedzkie.example.org/en/documents/06-wypozyczanie-sprzetu
+  (requires a volunteer account login).
+- Foundation office: ul. Sąsiedzka 12, 00-000 Warsaw,
+  open Mon–Fri 9:00–17:00 — printed copy on request.
+- On request: the coordinator will email the file
+  (coordination@bridges-neighbors.example.org).

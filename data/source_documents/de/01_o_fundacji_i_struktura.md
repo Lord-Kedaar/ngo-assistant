@@ -24,3 +24,12 @@ Der Vorstand genehmigt die Handlungsrichtungen und Ausgaben über 1500 PLN. Der 
 
 ## Wann ist der Koordinator zu kontaktieren
 Wenn die Angelegenheit Geld, Medien, personenbezogene Daten, die Sicherheit der Teilnehmer, Ausrüstung, Förderunterlagen oder Abweichungen vom Verfahren betrifft.
+
+## Wo Sie dieses Dokument finden
+Das Dokument ist an drei Orten verfügbar:
+- Stiftungs-Website: https://mosty-sasiedzkie.example.org/de/dokumente/01-o-fundacji
+  (Anmeldung mit Freiwilligenkonto erforderlich).
+- Stiftungssitz: ul. Sąsiedzka 12, 00-000 Warschau,
+  geöffnet Mo.–Fr. 9:00–17:00 — Ausdruck vor Ort.
+- Auf Anfrage: Der Koordinator sendet die Datei per E-Mail
+  (koordination@nachbarschaftsbruecken.example.org).

@@ -34,3 +34,12 @@ Dokumentacja grantowa powinna zawierać właściciela dokumentu, opis związku k
 Wniosek grantowy przygotowuje koordynator wskazany przez zarząd. Składa się go na adres grants@mosty-sasiedzkie.example.org i zawiera: cel projektu, planowany budżet, harmonogram, listę partnerów oraz opis grupy docelowej. Zarząd zatwierdza wniosek przed wysłaniem do grantodawcy.
 ## Raport końcowy grantu
 Raport końcowy grantu podpisuje koordynator grantu oraz członek zarządu odpowiedzialny za finanse. Raport zawiera rozliczenie finansowe, opis zrealizowanych działań, listę uczestników i osiągnięte wskaźniki. Termin wysyłki raportu wynika z umowy z grantodawcą — braki zgłasza się przed tym terminem.
+
+## Gdzie znaleźć ten dokument
+Dokument jest dostępny w trzech miejscach:
+- Strona fundacji: https://mosty-sasiedzkie.example.org/dokumenty/08-dokumenty-grantowe
+  (wymaga logowania kontem wolontariusza).
+- Siedziba fundacji: ul. Sąsiedzka 12, 00-000 Warszawa,
+  biuro czynne pon.–pt. 9:00–17:00 — wydruk na miejscu.
+- Na życzenie: koordynator prześle plik mailem
+  (koordynacja@mosty-sasiedzkie.example.org).
