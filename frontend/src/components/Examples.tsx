@@ -1,4 +1,5 @@
-import { type ReactElement } from 'react';
+import { type ReactElement } from "react";
+import { getLocale } from "../locales/useLocales";
 
 type Props = {
   questions: string[];
@@ -7,11 +8,13 @@ type Props = {
 
 export function Examples({ questions, onPick }: Props): ReactElement {
   if (questions.length === 0) return <></>;
+  const loc = getLocale();
+
   return (
-    <section className="examples" aria-label="Przykładowe pytania">
+    <section className="examples" aria-label={loc.examples.aria_label}>
       <div className="examples-head">
-        <p className="examples-eyebrow">Popularne pytania</p>
-        <p className="examples-hint">Kliknij, aby wstawić</p>
+        <p className="examples-eyebrow">{loc.examples.eyebrow}</p>
+        <p className="examples-hint">{loc.examples.hint}</p>
       </div>
       <div className="examples-list">
         {questions.slice(0, 4).map((q, i) => (
@@ -21,7 +24,7 @@ export function Examples({ questions, onPick }: Props): ReactElement {
             className="example"
             onClick={() => onPick(q)}
           >
-            <span className="num">{String(i + 1).padStart(2, '0')}</span>
+            <span className="num">{String(i + 1).padStart(2, "0")}</span>
             <span>{q}</span>
           </button>
         ))}
