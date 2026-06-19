@@ -73,14 +73,15 @@ export function App(): ReactElement {
   const [questions, setQuestions] = useState<{ id: string; kind: 'user' | 'bot'; text: string; sources?: Source[]; feedback?: 'up' | 'down' | null; loading?: boolean; label?: string }[]>([]);
   const abortRef = useRef<AbortController | null>(null);
 
-  // Init: status + quota + examples
+  // Init: status + quota + examples.
+  // `lang` was already resolved from localStorage in its lazy initialiser
+  // above, so reuse it here instead of re-reading storage.
   useEffect(() => {
     let mounted = true;
-    const initialLang: LangCode = (getStoredLang() && LOCALES[getStoredLang() as LangCode]) ? (getStoredLang() as LangCode) : 'pl';
     (async () => {
       try {
-        setReqLang(initialLang);
-        const [s, q, ex] = await Promise.allSettled([fetchStatus(), fetchQuota(), fetchExampleQuestions(initialLang)]);
+        setReqLang(lang);
+        const [s, q, ex] = await Promise.allSettled([fetchStatus(), fetchQuota(), fetchExampleQuestions(lang)]);
         if (!mounted) return;
         if (s.status === 'fulfilled') { setModelOnline(s.value.model_available); setLimit(s.value.questions_per_24h || 5); }
         if (q.status === 'fulfilled') { setRemaining(q.value.remaining); setLimit(q.value.limit || limit); if (q.value.remaining <= 0) setView({ kind: 'quota' }); }
