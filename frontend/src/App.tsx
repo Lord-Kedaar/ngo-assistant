@@ -11,7 +11,7 @@ import { StatusDetail } from './components/StatusDetail';
 import { Footer } from './components/Footer';
 import { LanguageSwitcher } from './components/LanguageSwitcher';
 import { fetchStatus, fetchQuota, fetchExampleQuestions, sendChat, validateClient, setLocale as _apiSetLocale, setReqLang, type ChatPayload, type Source } from './api';
-import { t, LOCALES, type Locale, type LangCode } from './locales/useLocales';
+import { t, LOCALES, setLocale as setUiLocale, type Locale, type LangCode } from './locales/useLocales';
 
 type ViewState =
   | { kind: 'idle' }
@@ -42,6 +42,7 @@ export function App(): ReactElement {
     const newLoc = LOCALES[code];
     setLocaleState(newLoc);
     _apiSetLocale(newLoc);
+    setUiLocale(newLoc);
   }, []);
 
   const [view, setView] = useState<ViewState>({ kind: 'idle' });
