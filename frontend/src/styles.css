@@ -645,3 +645,32 @@ footer a:hover { color: var(--fg); }
   .topbar { padding: 0; }
   footer { gap: 2px; }
 }
+/* Language switcher */
+.lang-switcher {
+  display: flex;
+  gap: 2px;
+  background: var(--surface, #f0f2f5);
+  border-radius: 8px;
+  padding: 2px;
+  margin: 0 auto;
+}
+.lang-btn {
+  border: none;
+  background: transparent;
+  color: var(--muted, #666);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 120ms, color 120ms;
+  letter-spacing: 0.04em;
+}
+.lang-btn:hover {
+  color: var(--fg, #111);
+}
+.lang-btn.is-active {
+  background: var(--bg, #fff);
+  color: var(--accent, #4f46e5);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}

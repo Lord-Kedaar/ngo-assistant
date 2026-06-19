@@ -1,9 +1,9 @@
-# Zasady komunikacji zewnętrznej i social media
+# Zasady wypożyczania sprzętu
 
 > **Metryka:** Fundacja Mosty Sąsiedzkie · dokument syntetyczny · wersja 1.0 · aktualizacja: 2026-03-15 · kontakt: koordynacja@mosty-sasiedzkie.example.org
 
 ## Cel dokumentu
-Posty zatwierdza komunikacja. Kontakt z mediami prowadzi osoba wskazana przez zarząd. Nie publikujemy danych bez zgody.
+Projektor, laptop i mikrofon rezerwuje się minimum 3 dni wcześniej. Zwrot odbywa się z wpisem w rejestrze.
 
 ## Najważniejsze zasady
 - Używaj wyłącznie fikcyjnych danych z domeny example.org.
@@ -24,3 +24,7 @@ Posty zatwierdza komunikacja. Kontakt z mediami prowadzi osoba wskazana przez za
 
 ## Kiedy skontaktować się z koordynatorem
 Gdy sprawa dotyczy pieniędzy, mediów, danych osobowych, bezpieczeństwa uczestników, sprzętu, dokumentów grantowych albo odstępstwa od procedury.
+
+## Jak wypożyczyć projektor
+Projektor rezerwuje się minimum 3 dni wcześniej. W zgłoszeniu należy podać termin, miejsce wydarzenia, osobę odpowiedzialną za odbiór i zwrot oraz informację, czy potrzebny jest kabel HDMI lub ekran. Zwrot projektora potwierdza się wpisem w rejestrze sprzętu.
+

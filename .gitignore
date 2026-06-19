@@ -18,3 +18,8 @@ data/quota/*
 # Screenshots and design artifacts
 screenshot*.png
 .bak-*/
+
+# Backup files from iterative development
+*.bak-*
+*.bak
+data/source_documents.bak-initial/

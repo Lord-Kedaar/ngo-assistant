@@ -1,9 +1,9 @@
-# Procedura obiegu dokumentów grantowych
+# Zasady komunikacji zewnętrznej i social media
 
 > **Metryka:** Fundacja Mosty Sąsiedzkie · dokument syntetyczny · wersja 1.0 · aktualizacja: 2026-03-15 · kontakt: koordynacja@mosty-sasiedzkie.example.org
 
 ## Cel dokumentu
-Każdy dokument grantowy ma właściciela. Koszt ma opis związku z projektem, a braki zgłasza się przed terminem raportu.
+Posty zatwierdza komunikacja. Kontakt z mediami prowadzi osoba wskazana przez zarząd. Nie publikujemy danych bez zgody.
 
 ## Najważniejsze zasady
 - Używaj wyłącznie fikcyjnych danych z domeny example.org.
@@ -24,3 +24,7 @@ Każdy dokument grantowy ma właściciela. Koszt ma opis związku z projektem, a
 
 ## Kiedy skontaktować się z koordynatorem
 Gdy sprawa dotyczy pieniędzy, mediów, danych osobowych, bezpieczeństwa uczestników, sprzętu, dokumentów grantowych albo odstępstwa od procedury.
+
+## Publikowanie postów w social media
+Posty w social media może publikować osoba z zespołu komunikacji albo osoba wyznaczona przez zarząd. Treść posta musi być zatwierdzona przez komunikację przed publikacją. Nie wolno publikować danych osobowych, zdjęć uczestników ani informacji poufnych bez odpowiedniej zgody.
+

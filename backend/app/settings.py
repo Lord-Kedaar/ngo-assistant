@@ -15,6 +15,9 @@ class Settings(BaseSettings):
     question_min_chars: int = 3
     question_max_chars: int = 400
     request_timeout_seconds: int = 75
+    generative_mode: bool = False
+    available_languages: list[str] = ['pl', 'en', 'de']
+    default_language: str = 'pl'
     retrieval_top_k: int = 4
     retrieval_min_score: float = 0.08
     quota_db_path: str = "data/quota/quota.sqlite3"

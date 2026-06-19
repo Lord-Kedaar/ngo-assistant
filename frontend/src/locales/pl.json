@@ -1,0 +1,102 @@
+{
+  "app": {
+    "title": "NGO Knowledge Assistant",
+    "description": "Demo · 5 pytań"
+  },
+  "example_questions": [
+    "Jak rozpocząć wolontariat?",
+    "Jakie dokumenty musi podpisać nowy wolontariusz?",
+    "Kto zatwierdza koszt wydarzenia?",
+    "Jak rozliczyć zakup materiałów?",
+    "Jak wypożyczyć projektor?",
+    "Kto może publikować posty w social media?",
+    "Jak zgłosić pomysł warsztatu?",
+    "Co powinno znaleźć się w dokumentacji grantowej?"
+  ],
+  "suggested_questions": [
+    {
+      "id": "p1",
+      "text": "Jak wygląda procedura wyjazdu służbowego?"
+    },
+    {
+      "id": "p2",
+      "text": "Jakie są zasady delegowania w fundacji?"
+    },
+    {
+      "id": "p3",
+      "text": "Jak rozliczyć wyjazd zagraniczny?"
+    }
+  ],
+  "placeholder_empty": "Np. Jak zgłosić pomysł warsztatu?",
+  "placeholder_filled": "Zacznij pisać…",
+  "placeholder_after_question": "Zadaj kolejne pytanie…",
+  "placeholder_quota": "Limit wykorzystany — spróbuj jutro.",
+  "bot_label": "Odpowiedź asystenta",
+  "quota": {
+    "label": "Dzienny limit pytań",
+    "reset": "Reset: dziś o 00:00",
+    "link": "Poproś o wyższy limit"
+  },
+  "feedback": {
+    "label": "Czy to pomogło?",
+    "up": "Tak, odpowiedź pomogła",
+    "down": "Nie, odpowiedź nie pomogła"
+  },
+  "source": {
+    "eyebrow": "Źródła · {count} {count_label}",
+    "hint": "Na podstawie dokumentów fundacji"
+  },
+  "state": {
+    "quota": {
+      "eyebrow": "Limit · {used} / {limit} pytań",
+      "title": "Wykorzystałeś dzienny limit pytań",
+      "text": "W ramach demo możesz zadać 5 pytań na dobę. Limit odnowi się o północy czasu lokalnego. Skontaktuj się z koordynatorem, jeśli potrzebujesz wyższego limitu."
+    },
+    "out_of_scope": {
+      "eyebrow": "Poza zakresem",
+      "title": "Nie mogę odpowiedzieć wiarygodnie",
+      "text": "Przeformułuj pytanie w kontekście procedur fundacji albo wybierz jedną z sugerowanych ścieżek poniżej."
+    },
+    "no_sources": {
+      "eyebrow": "Brak źródeł",
+      "title": "Nie znalazłem źródeł"
+    },
+    "unavailable": {
+      "title_503": "Model chwilowo nie odpowiada",
+      "title_timeout": "Odpowiedź trwała zbyt długo",
+      "eyebrow_503": "503 · Chwilowa niedostępność",
+      "eyebrow_timeout": "Timeout · brak odpowiedzi",
+      "retry": "Spróbuj ponownie"
+    },
+    "network_error": {
+      "eyebrow": "Błąd połączenia",
+      "title": "Nie udało się połączyć z asystentem"
+    }
+  },
+  "labels": {
+    "out_of_scope": "Poza zakresem",
+    "no_sources": "Brak źródeł",
+    "unavailable": "Niedostępny",
+    "timeout": "Timeout",
+    "network_error": "Błąd połączenia"
+  },
+  "errors": {
+    "empty": "Wpisz pytanie, zanim wyślesz.",
+    "too_short": "Pytanie jest za krótkie — minimum {min} znaki.",
+    "too_long": "Pytanie jest za długie — maksimum {max} znaków.",
+    "abort": "Przerwano.",
+    "timeout": "Odpowiedź trwała zbyt długo. Spróbuj ponownie.",
+    "network": "Błąd połączenia. Sprawdź sieć i spróbuj ponownie.",
+    "honeypot": "Twoje zgłoszenie zostało odrzucone jako podejrzane. Jeśli to pomyłka, odśwież stronę i spróbuj ponownie.",
+    "quota": "Wykorzystałeś dzienny limit pytań dla tego demonstratora."
+  },
+  "thread": {
+    "aria_label": "Historia rozmowy",
+    "greeting_eyebrow": "Spróbuj zamiast tego"
+  },
+  "footer": {
+    "copyright": "© 2026 Radosław Pleskot",
+    "privacy": "Prywatność",
+    "description": "Opis projektu"
+  }
+}

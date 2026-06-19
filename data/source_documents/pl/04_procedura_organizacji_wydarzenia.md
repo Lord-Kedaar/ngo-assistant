@@ -1,9 +1,9 @@
-# Zasady wypożyczania sprzętu
+# Procedura organizacji wydarzenia
 
 > **Metryka:** Fundacja Mosty Sąsiedzkie · dokument syntetyczny · wersja 1.0 · aktualizacja: 2026-03-15 · kontakt: koordynacja@mosty-sasiedzkie.example.org
 
 ## Cel dokumentu
-Projektor, laptop i mikrofon rezerwuje się minimum 3 dni wcześniej. Zwrot odbywa się z wpisem w rejestrze.
+Pomysł wydarzenia wysyła się na wydarzenia@mosty-sasiedzkie.example.org z celem, terminem, budżetem i potrzebami sprzętowymi.
 
 ## Najważniejsze zasady
 - Używaj wyłącznie fikcyjnych danych z domeny example.org.
@@ -24,3 +24,10 @@ Projektor, laptop i mikrofon rezerwuje się minimum 3 dni wcześniej. Zwrot odby
 
 ## Kiedy skontaktować się z koordynatorem
 Gdy sprawa dotyczy pieniędzy, mediów, danych osobowych, bezpieczeństwa uczestników, sprzętu, dokumentów grantowych albo odstępstwa od procedury.
+
+## Zgłoszenie pomysłu warsztatu
+Pomysł warsztatu zgłasza się na adres wydarzenia@mosty-sasiedzkie.example.org. Zgłoszenie powinno zawierać cel warsztatu, proponowany termin, grupę odbiorców, szacowany budżet, potrzeby sprzętowe i osobę odpowiedzialną za kontakt. Termin wydarzenia zatwierdza koordynator wydarzeń.
+
+## Zatwierdzanie kosztów wydarzenia
+Koszty wydarzenia do 150 zł zatwierdza koordynator. Koszty od 150 do 1500 zł zatwierdza zespół finansów. Koszty powyżej 1500 zł wymagają decyzji zarządu.
+

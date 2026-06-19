@@ -27,3 +27,7 @@ Aby rozpocząć wolontariat, kandydat pisze na `koordynacja@mosty-sasiedzkie.exa
 
 ## Kiedy skontaktować się z koordynatorem
 Gdy sprawa dotyczy pieniędzy, mediów, danych osobowych, bezpieczeństwa uczestników, sprzętu, dokumentów grantowych albo odstępstwa od procedury.
+
+## Dokumenty wymagane od nowego wolontariusza
+Nowy wolontariusz podpisuje porozumienie wolontariackie oraz zgody organizacyjne. Przed podpisaniem uzupełnia formularz zgłoszeniowy. Po komplecie dokumentów koordynator przydziela opiekuna i dopuszcza wolontariusza do pierwszego dyżuru.
+

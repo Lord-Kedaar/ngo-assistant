@@ -1,9 +1,9 @@
-# Procedura organizacji wydarzenia
+# Procedura obiegu dokumentów grantowych
 
 > **Metryka:** Fundacja Mosty Sąsiedzkie · dokument syntetyczny · wersja 1.0 · aktualizacja: 2026-03-15 · kontakt: koordynacja@mosty-sasiedzkie.example.org
 
 ## Cel dokumentu
-Pomysł wydarzenia wysyła się na wydarzenia@mosty-sasiedzkie.example.org z celem, terminem, budżetem i potrzebami sprzętowymi.
+Każdy dokument grantowy ma właściciela. Koszt ma opis związku z projektem, a braki zgłasza się przed terminem raportu.
 
 ## Najważniejsze zasady
 - Używaj wyłącznie fikcyjnych danych z domeny example.org.
@@ -24,3 +24,7 @@ Pomysł wydarzenia wysyła się na wydarzenia@mosty-sasiedzkie.example.org z cel
 
 ## Kiedy skontaktować się z koordynatorem
 Gdy sprawa dotyczy pieniędzy, mediów, danych osobowych, bezpieczeństwa uczestników, sprzętu, dokumentów grantowych albo odstępstwa od procedury.
+
+## Dokumentacja grantowa
+Dokumentacja grantowa powinna zawierać właściciela dokumentu, opis związku kosztu z projektem, termin raportu, komplet załączników finansowych oraz informację o brakach do uzupełnienia. Braki zgłasza się przed terminem raportu, nie po jego wysłaniu.
+

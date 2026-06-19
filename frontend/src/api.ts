@@ -1,3 +1,4 @@
+// i18n: error strings are in locales/*.json
 /* ============================================================
    api.ts — klient fetch dla backendu FastAPI
    Kontrakt (niezmienny):
@@ -7,6 +8,9 @@
                                      503 model offline / semaphore
    Źródła: backend/app/main.py, settings.py
    ============================================================ */
+
+let _locale: any = null;
+export function setLocale(l: any) { _locale = l; }
 
 export type Source = {
   filename: string;
@@ -84,9 +88,9 @@ export async function fetchQuota(): Promise<QuotaPayload> {
   return jsonOrThrow<QuotaPayload>(r);
 }
 
-export async function fetchExampleQuestions(): Promise<string[]> {
+export async function fetchExampleQuestions(lang?: string): Promise<string[]> {
   try {
-    const r = await fetch('/api/example-questions', { credentials: 'include' });
+    const r = await fetch('/api/example-questions' + (lang ? `?lang=${lang}` : ''), { credentials: 'include' });
     if (!r.ok) return [];
     const d = await jsonOrThrow<{ questions: string[] }>(r);
     return d.questions ?? [];
@@ -102,6 +106,9 @@ export async function fetchExampleQuestions(): Promise<string[]> {
  * - 200 z answer bez źródeł i nie-REFUSAL → no-sources (rzadki, awaryjny)
  * - timeout AbortError → timeout
  */
+let _reqLang = 'pl';
+export function setReqLang(l: string) { _reqLang = l; }
+
 export async function sendChat(
   question: string,
   website: string = '',
@@ -118,7 +125,7 @@ export async function sendChat(
   try {
     const r = await fetch('/api/chat', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 'Content-Type': 'application/json', 'Accept-Language': _reqLang },
       credentials: 'include',
       body: JSON.stringify({ question: question.trim(), website }),
       signal: ctrl.signal,

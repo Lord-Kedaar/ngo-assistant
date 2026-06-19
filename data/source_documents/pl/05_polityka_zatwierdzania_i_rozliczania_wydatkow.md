@@ -1,9 +1,9 @@
-# Onboarding nowego wolontariusza
+# Polityka zatwierdzania i rozliczania wydatków
 
 > **Metryka:** Fundacja Mosty Sąsiedzkie · dokument syntetyczny · wersja 1.0 · aktualizacja: 2026-03-15 · kontakt: koordynacja@mosty-sasiedzkie.example.org
 
 ## Cel dokumentu
-Dzień 0 rozmowa, dni 1-3 dokumenty, dni 4-7 wybór obszaru i opiekuna, dni 8-14 pierwszy dyżur.
+Do 150 zł zatwierdza koordynator, 150-1500 zł finanse, powyżej 1500 zł zarząd. Dokumenty rozliczeniowe wysyła się w ciągu 7 dni.
 
 ## Najważniejsze zasady
 - Używaj wyłącznie fikcyjnych danych z domeny example.org.
@@ -24,3 +24,7 @@ Dzień 0 rozmowa, dni 1-3 dokumenty, dni 4-7 wybór obszaru i opiekuna, dni 8-14
 
 ## Kiedy skontaktować się z koordynatorem
 Gdy sprawa dotyczy pieniędzy, mediów, danych osobowych, bezpieczeństwa uczestników, sprzętu, dokumentów grantowych albo odstępstwa od procedury.
+
+## Jak rozliczyć zakup materiałów
+Zakup materiałów rozlicza się przez przesłanie dokumentu zakupu do zespołu finansów w ciągu 7 dni. W zgłoszeniu trzeba podać nazwę wydarzenia lub projektu, kwotę, opis związku zakupu z działaniem fundacji oraz załączyć fakturę albo rachunek. Jeśli koszt przekracza 150 zł, przed zakupem wymagana jest akceptacja finansów; powyżej 1500 zł decyzję podejmuje zarząd.
+
