@@ -1,3 +1,25 @@
+## [2026-06-19] — Persist language selection across refreshes
+
+### Added
+- **`localStorage` persistence for language:** `useLocales.ts` exposes
+  `getStoredLang()` / `setStoredLang(code)` backed by `localStorage`
+  key `ngo.lang`. The lookup is wrapped in try/catch so private
+  browsing or storage-disabled contexts fall back to the default.
+- **`App.tsx`** initial state now reads the stored language via lazy
+  initialisers for both `locale` and `lang`, and the bootstrap
+  `useEffect` (status / quota / examples fetch) reuses that stored
+  language instead of a hardcoded `'pl'`.
+- **`switchLanguage`** writes the new choice to `localStorage` so the
+  next page reload (or a new tab on the same origin) lands in the
+  language the user just picked.
+
+### Verified
+- TypeScript: `tsc -b` passes.
+- Vite build: 223.85 kB JS / 18.31 kB CSS.
+- Backend unaffected: `/api/example-questions?lang={pl,en,de}` still
+  returns the language-appropriate 4 of 24 random questions.
+
+
 ## [2026-06-19] — Per-language RAG isolation and question pool
 
 ### Added

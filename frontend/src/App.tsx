@@ -11,7 +11,7 @@ import { StatusDetail } from './components/StatusDetail';
 import { Footer } from './components/Footer';
 import { LanguageSwitcher } from './components/LanguageSwitcher';
 import { fetchStatus, fetchQuota, fetchExampleQuestions, sendChat, validateClient, setLocale as _apiSetLocale, setReqLang, type ChatPayload, type Source } from './api';
-import { t, LOCALES, setLocale as setUiLocale, type Locale, type LangCode } from './locales/useLocales';
+import { t, LOCALES, setLocale as setUiLocale, getStoredLang, setStoredLang, type Locale, type LangCode } from './locales/useLocales';
 
 type ViewState =
   | { kind: 'idle' }
@@ -27,12 +27,19 @@ type ViewState =
   | { kind: 'network-error'; question: string; message: string };
 
 export function App(): ReactElement {
-  const [locale, setLocaleState] = useState<Locale>(t());
-  const [lang, setLangState] = useState<LangCode>('pl');
+  const [locale, setLocaleState] = useState<Locale>(() => {
+    const stored = getStoredLang();
+    return stored && LOCALES[stored] ? LOCALES[stored] : t();
+  });
+  const [lang, setLangState] = useState<LangCode>(() => {
+    const stored = getStoredLang();
+    return stored && LOCALES[stored] ? stored : 'pl';
+  });
   const _ = locale;
   const switchLanguage = useCallback((code: LangCode) => {
     if (!LOCALES[code]) return;
     setLangState(code);
+    setStoredLang(code);
     const newLoc = LOCALES[code];
     setLocaleState(newLoc);
     _apiSetLocale(newLoc);
@@ -69,10 +76,11 @@ export function App(): ReactElement {
   // Init: status + quota + examples
   useEffect(() => {
     let mounted = true;
+    const initialLang: LangCode = (getStoredLang() && LOCALES[getStoredLang() as LangCode]) ? (getStoredLang() as LangCode) : 'pl';
     (async () => {
       try {
-        setReqLang('pl');
-        const [s, q, ex] = await Promise.allSettled([fetchStatus(), fetchQuota(), fetchExampleQuestions('pl')]);
+        setReqLang(initialLang);
+        const [s, q, ex] = await Promise.allSettled([fetchStatus(), fetchQuota(), fetchExampleQuestions(initialLang)]);
         if (!mounted) return;
         if (s.status === 'fulfilled') { setModelOnline(s.value.model_available); setLimit(s.value.questions_per_24h || 5); }
         if (q.status === 'fulfilled') { setRemaining(q.value.remaining); setLimit(q.value.limit || limit); if (q.value.remaining <= 0) setView({ kind: 'quota' }); }

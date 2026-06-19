@@ -159,3 +159,22 @@ export function setLocale(l: any) {
 }
 export function getLocale(): Locale { return _current; }
 export function t(): Locale { return _current; }
+
+
+export const LOCALES_BY_LANG: Record<LangCode, Locale> = LOCALES as Record<LangCode, Locale>;
+
+const STORAGE_KEY = 'ngo.lang';
+
+export function getStoredLang(): LangCode | null {
+  try {
+    const v = typeof localStorage !== 'undefined' ? localStorage.getItem(STORAGE_KEY) : null;
+    if (v && v in LOCALES) return v as LangCode;
+  } catch { /* SSR or storage disabled */ }
+  return null;
+}
+
+export function setStoredLang(code: LangCode): void {
+  try {
+    if (typeof localStorage !== 'undefined') localStorage.setItem(STORAGE_KEY, code);
+  } catch { /* ignore */ }
+}
