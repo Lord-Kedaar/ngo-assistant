@@ -36,3 +36,11 @@ Dokument jest dostępny w trzech miejscach:
   biuro czynne pon.–pt. 9:00–17:00 — wydruk na miejscu.
 - Na życzenie: koordynator prześle plik mailem
   (koordynacja@mosty-sasiedzkie.example.org).
+
+## Czas trwania onboardingu
+Onboarding nowego wolontariusza trwa **co najmniej 14 dni roboczych** (dwa tygodnie od rozmowy wprowadzającej do pierwszego samodzielnego dyżuru). Harmonogram:
+- **Dzień 0** — rozmowa wprowadzająca z koordynatorem.
+- **Dni 1-3** — uzupełnienie formularza zgłoszeniowego, podpisanie porozumienia wolontariackiego i zgód organizacyjnych.
+- **Dni 4-7** — wybór obszaru działalności i przydzielenie opiekuna.
+- **Dni 8-14** — krótkie szkolenie i pierwszy dyżur pod opieką opiekuna.
+Dokumenty z dni 1-3 są wymagane przed dopuszczeniem do samodzielnego dyżuru.

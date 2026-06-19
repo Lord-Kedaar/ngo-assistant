@@ -36,3 +36,6 @@ The document is available in three places:
   open Mon–Fri 9:00–17:00 — printed copy on request.
 - On request: the coordinator will email the file
   (coordination@bridges-neighbors.example.org).
+
+## Where the equipment is stored
+Equipment available for borrowing (projector, laptop, microphone, screen, HDMI cable) is stored on a **shelf in the foundation office** at ul. Sąsiedzka 12, 00-000 Warsaw, room 102 (first floor). Access to the shelf is held by the coordinator and the designated equipment caretaker. The key to room 102 is held by the coordinator; after borrowing, the date and the responsible person are entered in the equipment register (the "Equipment" folder next to the shelf).

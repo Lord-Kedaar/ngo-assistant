@@ -36,3 +36,11 @@ Das Dokument ist an drei Orten verfügbar:
   geöffnet Mo.–Fr. 9:00–17:00 — Ausdruck vor Ort.
 - Auf Anfrage: Der Koordinator sendet die Datei per E-Mail
   (koordination@nachbarschaftsbruecken.example.org).
+
+## Dauer des Onboardings
+Das Onboarding neuer Freiwilliger dauert **mindestens 14 Werktage** (zwei Wochen vom Einführungsgespräch bis zum ersten eigenständigen Einsatz). Zeitplan:
+- **Tag 0** — Einführungsgespräch mit dem Koordinator.
+- **Tage 1-3** — Ausfüllen des Anmeldeformulars, Unterzeichnung der Freiwilligenvereinbarung und organisatorischer Einverständniserklärungen.
+- **Tage 4-7** — Auswahl des Tätigkeitsbereichs und Zuteilung eines Mentors.
+- **Tage 8-14** — kurze Schulung und erster Einsatz unter Mentor-Aufsicht.
+Die Dokumente aus den Tagen 1-3 sind erforderlich, bevor der Freiwillige eigenständig eingesetzt werden darf.

@@ -22,7 +22,7 @@ async def complete(messages):
         'model': settings.omlx_model,
         'messages': messages,
         'temperature': 0.1,
-        'max_tokens': 180,
+        'max_tokens': 512,  # 180 was too tight — answers were truncated to one short sentence
         'stream': False,
         'thinking': False,
     }

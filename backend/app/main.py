@@ -88,10 +88,17 @@ async def chat(p:ChatIn,request:Request,response:Response):
  async with sem:
   best_chunk=hits[0][1]; excerpt=' '.join(best_chunk['text'].split())[:1200]
   if settings.generative_mode:
+   # Surface all documents in the base as a TOC prefix so the LLM knows
+   # what entities exist even when the retrieved chunks are from only one
+   # section. Helps with meta-questions ("gdzie znajdę X?", "how long does
+   # X take?") where the relevant chunk is in a different document.
+   doc_titles_lang = DOC_TITLES.get(lang, DOC_TITLES['pl'])
+   doc_list = '\n'.join(f'- {num} {title}' for num, title in doc_titles_lang.items())
+   toc = txt.get('doc_toc_prefix', 'DOSTĘPNE DOKUMENTY W BAZIE:') + '\n' + doc_list + '\n\n'
    context='\n\n'.join(txt.get('source_label','Źródło')+': '+display_source(lang, c['filename'], c['section_title'])+'\n'+(' '.join(c['text'].split())[:1200]) for _,c in hits)
    messages=[
     {'role':'system','content':txt.get('system_prompt',SYSTEM)},
-    {'role':'user','content':txt.get('answer_in_lang','Odpowiedz po polsku wyłącznie na podstawie kontekstu')+'\n\nKONTEKST:\n'+context+'\n\nPYTANIE: '+p.question}
+    {'role':'user','content':txt.get('answer_in_lang','Odpowiedz po polsku wyłącznie na podstawie kontekstu')+'\n\n'+toc+'KONTEKST:\n'+context+'\n\nPYTANIE: '+p.question}
    ]
    raw=await complete(messages); raw=re.sub(r'\s*\[(Źródło|Source|Quelle):[^\]]+\]\s*',' ',raw).strip(); ans=sanitize_markdown(raw + '\n\n['+txt.get('source_label','Źródło')+': '+display_source(lang, best_chunk['filename'], best_chunk['section_title'])+']')
   else:

@@ -36,3 +36,6 @@ Das Dokument ist an drei Orten verfügbar:
   geöffnet Mo.–Fr. 9:00–17:00 — Ausdruck vor Ort.
 - Auf Anfrage: Der Koordinator sendet die Datei per E-Mail
   (koordination@nachbarschaftsbruecken.example.org).
+
+## Lagerort der Ausrüstung
+Die ausleihbare Ausrüstung (Beamer, Laptop, Mikrofon, Leinwand, HDMI-Kabel) wird in einem **Regal im Stiftungsbüro** in der ul. Sąsiedzka 12, 00-000 Warschau, Raum 102 (erster Stock) aufbewahrt. Zugang zum Regal haben der Koordinator und der bestimmte Gerätebetreuer. Der Schlüssel zu Raum 102 ist beim Koordinator; nach der Ausleihe werden Datum und verantwortliche Person im Geräteregister eingetragen (der "Geräte"-Ordner neben dem Regal).

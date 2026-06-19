@@ -1,3 +1,52 @@
+## [2026-06-19] — Generative augmentation + content gap fixes
+
+### Added
+- **TOC prefix in LLM prompt:** the chat route now prepends a
+  "DOSTĘPNE DOKUMENTY W BAZIE" / "AVAILABLE DOCUMENTS IN THE BASE"
+  / "VERFÜGBARE DOKUMENTE IN DER DATENBANK" listing of all 10
+  document titles per language to the user message. The list is
+  built from  in . This lets
+  the LLM know that a given document exists as an entity even when
+  the retrieved chunks come from only one section — fixes meta-
+  questions like "gdzie znajdę X?" / "how long does X take?" when
+  the answer is in a different section than the retrieved one.
+- **Per-language "Czas trwania onboardingu" section:** doc 03
+  (PL/EN/DE) now has a dedicated "Onboarding timeline" /
+  "Czas trwania onboardingu" / "Dauer des Onboardings" section
+  with the exact 14-working-day answer to the question that
+  previously triggered a "Brak informacji" refusal.
+- **Per-language "Miejsce przechowywania sprzętu" section:** doc
+  06 (PL/EN/DE) now describes the storage location (shelf in the
+  foundation office, ul. Sąsiedzka 12, room 102). Closes the
+  content gap surfaced by the German screenshot question
+  "Wo wird die Ausrüstung zur Ausleihe aufbewahrt?".
+
+### Changed
+- ** 180 → 512 in :** the 180
+  cap was truncating answers to one short sentence. 512 is still
+  conservative for  at temperature
+  0.1 but lets the model produce a real sentence + citation.
+
+### Verified
+- 72/72 questions in the question_pool return a non-refusal answer
+  in PL/EN/DE (was 72/72 before, but only because the pool was
+  already curated; this run adds the two previously-missing
+  topics).
+- Live API:
+  - PL "Ile trwa onboarding wolontariusza?" → top source
+     (score 0.916), answer:
+    "Onboarding trwa co najmniej 14 dni roboczych".
+  - EN "How long does volunteer onboarding take?" → answer
+    "lasts at least 14 working days" (citation still points to
+    "Documents in days 1-3" because BM25 boost favours that
+    chunk; LLM still uses the timeline section from the same
+    doc — cosmetic issue only).
+  - DE "Wo wird die Ausrüstung zur Ausleihe aufbewahrt?" → top
+    source  (score 0.906), answer
+    with full storage location (Regal im Stiftungsbüro, Raum 102).
+- Vector indices:  76 → 78 chunks
+  each (2 new sections × 3 languages).
+
 ## [2026-06-19] — Quota temporarily disabled (portfolio work)
 
 ### Changed

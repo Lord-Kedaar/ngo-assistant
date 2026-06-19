@@ -36,3 +36,11 @@ The document is available in three places:
   open Mon–Fri 9:00–17:00 — printed copy on request.
 - On request: the coordinator will email the file
   (coordination@bridges-neighbors.example.org).
+
+## Onboarding timeline
+New volunteer onboarding lasts **at least 14 working days** (two weeks from the introductory conversation to the first independent shift). Schedule:
+- **Day 0** — introductory conversation with the coordinator.
+- **Days 1-3** — completing the application form, signing the volunteer agreement and organizational consents.
+- **Days 4-7** — choosing the area of activity and assigning a mentor.
+- **Days 8-14** — short training and first shift under mentor supervision.
+The documents from days 1-3 are required before the volunteer is allowed to work an independent shift.

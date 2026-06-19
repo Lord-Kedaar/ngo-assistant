@@ -36,3 +36,6 @@ Dokument jest dostępny w trzech miejscach:
   biuro czynne pon.–pt. 9:00–17:00 — wydruk na miejscu.
 - Na życzenie: koordynator prześle plik mailem
   (koordynacja@mosty-sasiedzkie.example.org).
+
+## Miejsce przechowywania sprzętu
+Sprzęt do wypożyczenia (projektor, laptop, mikrofon, ekran, kabel HDMI) jest przechowywany w **regale w biurze fundacji** przy ul. Sąsiedzka 12, 00-000 Warszawa, w pokoju 102 (pierwsze piętro). Dostęp do regału mają: koordynator i wyznaczony opiekun sprzętu. Klucz do pokoju 102 jest u koordynatora; po wypożyczeniu wpisuje się datę i osobę odpowiedzialną w rejestrze sprzętu (teczka "Sprzęt" przy regale).
