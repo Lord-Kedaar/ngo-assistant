@@ -1,3 +1,26 @@
+## [2026-06-19] — Remove duplicate "5 questions per day" text
+
+### Fixed
+- **Triple "W ramach demo możesz zadać 5 pytań na dobę" / "You can
+  ask 5 questions per day" / "Sie können 5 Fragen pro Tag stellen"
+  in quota-exhausted view:** the string was being rendered three
+  times — once as the body paragraph of the ErrorState, once in the
+  DisabledComposerNote next to the padlock icon, and once as the
+  hint under the composer. The ErrorState body was the duplicate;
+  the padlock note and the hint under the composer are the
+  canonical places. The ErrorState body is now removed.
+
+### Changed
+- **frontend/src/components/ErrorState.tsx:** `text` prop changed
+  from `string` to optional `string`. The component renders the
+  `<p className="state-text">` only when `text` is provided.
+- **frontend/src/App.tsx:** the quota ErrorState no longer
+  receives `text={_.state.quota.text}`. The DisabledComposerNote
+  and Composer hint still consume the same locale key.
+
+### Verified
+- `npm run build` passes (223.81 kB JS / 18.31 kB CSS).
+
 ## [2026-06-19] — Generative augmentation + content gap fixes
 
 ### Added
