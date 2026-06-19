@@ -12,6 +12,7 @@ class Settings(BaseSettings):
     hmac_secret: str = "change-me"
     session_quota_per_24h: int = 5
     global_daily_limit: int = 50
+    quota_enabled: bool = True  # toggle for portfolio work — set QUOTA_ENABLED=false in .env
     store_query_content: bool = False
     question_min_chars: int = 3
     question_max_chars: int = 400

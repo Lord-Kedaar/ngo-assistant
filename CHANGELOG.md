@@ -1,3 +1,21 @@
+## [2026-06-19] — Quota temporarily disabled (portfolio work)
+
+### Changed
+- ** flag in settings:** added a 
+  field to . The chat route now skips the
+  per-session and global rate-limit checks entirely when the flag is
+  false. Default is  (no behavior change); toggle by setting
+   in .
+- **:**  (with a comment explaining how to
+  re-enable). The flag is in place because portfolio work and the
+  upcoming question-pool validation sweep both need unbounded testing
+  sessions — restoring the limit before the public demo is open.
+
+### Verified
+- 7 sequential /api/chat calls with the same  cookie
+  all return HTTP 200 (was: 5 OK then 2x HTTP 429 before this change).
+- Health endpoint unchanged: .
+
 ## [2026-06-19] — "Gdzie znaleźć" sections in every document
 
 ### Added

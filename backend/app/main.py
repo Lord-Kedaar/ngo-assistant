@@ -79,7 +79,7 @@ async def chat(p:ChatIn,request:Request,response:Response):
  txt=tr(lang)
  t=time.time(); sid=load_session(request.cookies.get('ngo_demo_session','')) or hashlib.sha256(str(time.time()).encode()).hexdigest(); response.set_cookie('ngo_demo_session',signed_session(sid),httponly=True,secure=True,samesite='lax',max_age=86400); sh=hmac_hash(sid); ip=hmac_hash(request.client.host) if request.client else None
  if p.website: raise HTTPException(400,'Invalid form')
- if count_global()>=settings.global_daily_limit or count_session(sh)>=settings.session_quota_per_24h: log_event(sh,ip,'rate_limited'); raise HTTPException(429,'Limit pytań został wykorzystany.')
+ if settings.quota_enabled and (count_global()>=settings.global_daily_limit or count_session(sh)>=settings.session_quota_per_24h): log_event(sh,ip,'rate_limited'); raise HTTPException(429,'Limit pytań został wykorzystany.')
  if prefilter(p.question): log_event(sh,ip,'out_of_scope'); return {'answer':txt.get('refusal',REFUSAL),'sources':[],'remaining':settings.session_quota_per_24h-count_session(sh)-1}
  hits=vector_rag.search(p.question, lang); best=hits[0][0] if hits else 0
  if not hits or best<settings.retrieval_min_score: log_event(sh,ip,'out_of_scope',0,best,0); return {'answer':txt.get('refusal',REFUSAL),'sources':[],'remaining':settings.session_quota_per_24h-count_session(sh)-1}
