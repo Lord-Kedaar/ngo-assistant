@@ -29,7 +29,7 @@ export interface Locale {
   feedback: { label: string; up: string; down: string };
   source: { eyebrow: string; hint: string; document_singular: string; document_plural: string };
   state: {
-    quota: { eyebrow: string; title: string; text: string };
+    quota: { eyebrow: string; title: string; text: string; projectLink: string };
     out_of_scope: { eyebrow: string; title: string; text: string };
     no_sources: { eyebrow: string; title: string };
     unavailable: { title_503: string; title_timeout: string; eyebrow_503: string; eyebrow_timeout: string; retry: string };
@@ -65,7 +65,7 @@ export const PL: Locale = {
   feedback:{label:"Czy to pomogło?",up:"Tak, odpowiedź pomogła",down:"Nie, odpowiedź nie pomogła"},
   source:{eyebrow:"Źródła · {count} {label}",hint:"Na podstawie dokumentów fundacji",document_singular:"dokument",document_plural:"dokumenty"},
   state:{
-    quota:{eyebrow:"Limit · {used} / {limit} pytań",title:"Wykorzystałeś dzienny limit pytań",text:"W ramach demo możesz zadać 5 pytań na dobę."},
+    quota:{eyebrow:"Limit · {used} / {limit} pytań",title:"Limit demo został wykorzystany",text:"To publiczna wersja portfolio, więc liczba akcji jest ograniczona. Pełny opis projektu znajdziesz tutaj:",projectLink:"Opis projektu NGO Assistant"},
     out_of_scope:{eyebrow:"Poza zakresem",title:"Nie mogę odpowiedzieć wiarygodnie",text:"Przeformułuj pytanie."},
     no_sources:{eyebrow:"Brak źródeł",title:"Nie znalazłem źródeł"},
     unavailable:{title_503:"Model niedostępny",title_timeout:"Odpowiedź za długo trwała",eyebrow_503:"503",eyebrow_timeout:"Timeout",retry:"Spróbuj ponownie"},
@@ -101,7 +101,7 @@ export const EN: Locale = {
   feedback:{label:"Was this helpful?",up:"Yes",down:"No"},
   source:{eyebrow:"Sources · {count} {label}",hint:"Based on foundation documents",document_singular:"document",document_plural:"documents"},
   state:{
-    quota:{eyebrow:"Limit · {used} / {limit} questions",title:"Daily limit reached",text:"You can ask 5 questions per day."},
+    quota:{eyebrow:"Limit · {used} / {limit} questions",title:"The demo limit has been reached",text:"This is a public portfolio version, so the number of actions is limited. You can read the full project description here:",projectLink:"NGO Assistant project description"},
     out_of_scope:{eyebrow:"Out of scope",title:"Cannot answer reliably",text:"Rephrase your question."},
     no_sources:{eyebrow:"No sources found",title:"No relevant documents found"},
     unavailable:{title_503:"Model offline",title_timeout:"Response too slow",eyebrow_503:"503",eyebrow_timeout:"Timeout",retry:"Try again"},
@@ -137,7 +137,7 @@ export const DE: Locale = {
   feedback:{label:"War das hilfreich?",up:"Ja",down:"Nein"},
   source:{eyebrow:"Quellen · {count} {label}",hint:"Basierend auf Stiftungsdokumenten",document_singular:"Dokument",document_plural:"Dokumente"},
   state:{
-    quota:{eyebrow:"Limit · {used} / {limit} Fragen",title:"Tägliches Limit erreicht",text:"Sie können 5 Fragen pro Tag stellen."},
+    quota:{eyebrow:"Limit · {used} / {limit} Fragen",title:"Das Demo-Limit wurde erreicht",text:"Dies ist eine öffentliche Portfolio-Version, daher ist die Anzahl der Aktionen begrenzt. Die vollständige Projektbeschreibung findest du hier:",projectLink:"Projektbeschreibung NGO Assistant"},
     out_of_scope:{eyebrow:"Außerhalb des Bereichs",title:"Kann nicht zuverlässig antworten",text:"Formulieren Sie Ihre Frage um."},
     no_sources:{eyebrow:"Keine Quellen",title:"Keine relevanten Dokumente gefunden"},
     unavailable:{title_503:"Modell offline",title_timeout:"Antwort zu langsam",eyebrow_503:"503",eyebrow_timeout:"Timeout",retry:"Erneut versuchen"},

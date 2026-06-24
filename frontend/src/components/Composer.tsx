@@ -106,7 +106,7 @@ export function Composer({
       <p className="privacy">
         {loc.composer.privacy_notice}
         {" "}
-        <a href="https://radoslaw-pleskot.com/privacy#ngo-assistant">
+        <a href="https://radoslaw-pleskot.com/pl/privacy/" target="_blank" rel="noopener noreferrer">
           {loc.composer.privacy_link}
         </a>
       </p>

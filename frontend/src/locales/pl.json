@@ -1,7 +1,7 @@
 {
   "app": {
     "title": "NGO Knowledge Assistant",
-    "description": "Demo · 5 pytań"
+    "description": "Demo · 4 pytania"
   },
   "example_questions": [
     "Jak rozpocząć wolontariat?",
@@ -49,8 +49,9 @@
   "state": {
     "quota": {
       "eyebrow": "Limit · {used} / {limit} pytań",
-      "title": "Wykorzystałeś dzienny limit pytań",
-      "text": "W ramach demo możesz zadać 5 pytań na dobę. Limit odnowi się o północy czasu lokalnego. Skontaktuj się z koordynatorem, jeśli potrzebujesz wyższego limitu."
+      "title": "Limit demo został wykorzystany",
+      "text": "To publiczna wersja portfolio, więc liczba akcji jest ograniczona. Pełny opis projektu znajdziesz tutaj:",
+      "projectLink": "Opis projektu NGO Assistant"
     },
     "out_of_scope": {
       "eyebrow": "Poza zakresem",

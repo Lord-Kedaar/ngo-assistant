@@ -10,7 +10,7 @@ class Settings(BaseSettings):
     embedding_model: str = "bge-m3-mlx-4bit"
     cookie_secret: str = "change-me"
     hmac_secret: str = "change-me"
-    session_quota_per_24h: int = 5
+    session_quota_per_24h: int = 4
     global_daily_limit: int = 50
     quota_enabled: bool = True  # toggle for portfolio work — set QUOTA_ENABLED=false in .env
     store_query_content: bool = False
