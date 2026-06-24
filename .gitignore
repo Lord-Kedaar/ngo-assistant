@@ -23,3 +23,13 @@ screenshot*.png
 *.bak-*
 *.bak
 data/source_documents.bak-initial/
+
+# Internal agent workflow / reports — never commit
+METRICUS_*.md
+STATE_LOG*.md
+STATE_LOG*.txt
+*_POLISH_REPORT.md
+*_POLISH_FIX_REPORT.md
+*_REPORT.md
+*.bak-*
+*.backup-*
