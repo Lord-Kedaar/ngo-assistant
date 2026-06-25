@@ -29,7 +29,13 @@ type ViewState =
 export function App(): ReactElement {
   const [locale, setLocaleState] = useState<Locale>(() => {
     const stored = getStoredLang();
-    return stored && LOCALES[stored] ? LOCALES[stored] : t();
+    const initial = stored && LOCALES[stored] ? LOCALES[stored] : t();
+    // Sync the module-level _current in useLocales so non-React consumers
+    // (e.g. Composer which calls getLocale() directly) see the right language
+    // on first render after a reload — without this, switching to EN/DE and
+    // reloading leaves Composer reading PL until the user clicks the flag again.
+    setUiLocale(initial);
+    return initial;
   });
   const [lang, setLangState] = useState<LangCode>(() => {
     const stored = getStoredLang();
